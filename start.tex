@@ -1,0 +1,56 @@
+\documentclass[BSP,english,oneside]{gucthesis}
+
+\usepackage[utf8]{inputenc}		%UTF-8 encoded inlude files
+\usepackage[pdftex]{graphicx,hyperref}
+\usepackage{color}
+
+% Remove '%' in front of \renewcommand the parent command
+
+% Create command for commenting
+\newcommand{\comment}[1]{\textcolor{blue}{\emph{#1}}}
+%\renewcommand{\comment}[1]{}
+
+% Create command for todo things
+\newcommand{\todo}[1]{{\color{green}#1}}
+
+% Norwegian Characters,  needs the {} or to be separate from the next letters
+% \o{}   \aa{}   \ae{}   so at the end of a word you can use \o  \aa   \ae
+% \O{}   \AA{}   \AE{}   you can also just leave a space and latex will remove it
+%                        eg,  H\o gskolen i Gj\o vik
+
+
+\begin{document}
+
+\input{BachelorThesisData}
+
+\makefrontpages
+
+\input{bachelorIntro}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Put introduction here
+\input{introduction}
+
+\input{packages}
+
+\input{structure}
+
+\bibliographystyle{gucthesis}
+\bibliography{BachelorExample}
+
+
+
+\appendix %after this line all chapters will have leters instead of numbers
+
+\input{meetings}
+
+\GUC, 
+\comment{so what}
+
+\todo{task \#1}
+This is a todo-task we need to get done.
+
+\end{document}
