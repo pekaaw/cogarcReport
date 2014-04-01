@@ -91,7 +91,7 @@
 \xdef\gucthesisdate{2011/05/10}
 \xdef\gucthesisversion{1.01}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{gucthesis}
+\ProvidesClass{classes/gucthesis}
   [\gucthesisdate\space
    v\gucthesisversion\space
    Copyright (C) 2011 Ivar Farup and Simon McCallum]

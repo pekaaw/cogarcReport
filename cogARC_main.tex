@@ -12,6 +12,9 @@
 % For colouring text
 \usepackage{color}
 
+% For appendix title
+\usepackage{appendix}
+
 % Remove '%' in front of \renewcommand the parent command
 
 % Create command for commenting
@@ -33,7 +36,7 @@
 
 \makefrontpages
 
-\input{includes/cogARC_intro}
+\input{includes/cogARC_preface}
 
 \tableofcontents
 \listoffigures
@@ -42,18 +45,38 @@
 % Put introduction here
 \input{includes/cogARC_introduction}
 
-\input{includes/cogARC_packages}
+\chapter{Project}
+\input{includes/cogARC_project_description_and_goals}
+\input{includes/cogARC_project_objectives}
+\input{includes/cogARC_background_and_history}
 
-\input{includes/cogARC_structure}
+\chapter{Development}
+\input{includes/cogARC_schedule}
+\input{includes/cogARC_development_process}
 
+\chapter{Problems}
+\input{includes/cogARC_unity}
+\input{includes/cogARC_unityscript}
+
+\chapter{Tools}
+\input{includes/cogARC_version_control}
+
+
+
+% References
 \bibliographystyle{classes/gucthesis}
 \bibliography{includes/cogARC_bibliography}
 
-
-
 \appendix %after this line all chapters will have leters instead of numbers
+\appendixpage
+\addappheadtotoc
 
-\input{includes/cogARC_meetings}
+% Examples
+\input{includes/example_packages}
+
+\input{includes/example_structure}
+
+\input{includes/example_meetings}
 
 \GUC, 
 \comment{so what}
