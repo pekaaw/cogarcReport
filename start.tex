@@ -1,7 +1,15 @@
-\documentclass[BSP,english,oneside]{gucthesis}
+% BSP for Bachelor in Game Programming
+% english instead of norsk
+% oneside for delivery, twoside for book style
+\documentclass[BSP,english,oneside]{classes/gucthesis}
 
-\usepackage[utf8]{inputenc}		%UTF-8 encoded inlude files
+% For utf8 encoded .tex files
+\usepackage[utf8]{inputenc}
+
+% For cross references in pdf
 \usepackage[pdftex]{graphicx,hyperref}
+
+% For colouring text
 \usepackage{color}
 
 % Remove '%' in front of \renewcommand the parent command
@@ -21,7 +29,7 @@
 
 \begin{document}
 
-\input{BachelorThesisData}
+\input{includes/cogARC_data}
 
 \makefrontpages
 
@@ -32,14 +40,14 @@
 \listoftables
 
 % Put introduction here
-\input{introduction}
+\input{includes/cogARC_introduction}
 
-\input{packages}
+\input{includes/cogARC_packages}
 
-\input{structure}
+\input{includes/cogARC_structure}
 
-\bibliographystyle{gucthesis}
-\bibliography{BachelorExample}
+\bibliographystyle{classes/gucthesis}
+\bibliography{includes/cogARC_bibliography}
 
 
 
