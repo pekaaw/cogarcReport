@@ -18,20 +18,17 @@ Some of the major differences between Unitys JavaScript (henceforth named UnityS
 
 \subsection {Classes}
 JavaScript have no concept of classes as it is a prototypical language, meaning it will have the properties that is assigned to it, but is not bound to them.
-Properties cna be added or deleted at will in runtime, this is true for both members of the object and functions. UnityScript is much more object oriented 
-with strongly typed and defined classes that cannot be changed in runtime (the exception to this rule is reflection).
-This makes it difficult to work with UnityScript if you have little experience using it, or have yet to find out that the difference between JavaScript
-and UnityScript
+Properties can be added or deleted at will in runtime, this is true for both members of the object and functions. UnityScript is much more object oriented with strongly typed and defined classes that cannot be changed in runtime (the exception to this rule is reflection).
+This makes it difficult to work with UnityScript if you have little experience using it, or have yet to find out that the difference between JavaScriptand UnityScript
 
 \subsection {Restricted dynamic typing}
 While both JavaScript and UnityScript both have dynamic typing it is much more restricted in UnityScripy. % Blah blah blah
 
-\subsection {Differenty privacy}
-UnityScript, being structrured like other object oriented languages have the usual levels of privacy of memebers within a class being marked
-as eiter Private, Protected or Public. JavaScript have per function privacy. Meaning a variable declared in a function is availible in the entire function.
-Seing that JavaScript does not 
+\subsection {Different privacy}
+UnityScript, being structured like other object oriented languages have the usual levels of privacy of members within a class being markedas either Private, Protected or Public. JavaScript have per function privacy. Meaning a variable declared in a function is available in the entire function but not
+outside of the function.
+
 \subsection {No delete}
-
+In UnityScript there is no way to delete a variable after is has been created or instantiated other than letting it go out of scope. This makes it tricky to work with if you are used to managing the memory yourself.
 \subsection {Not JavaScript library compatible}
-
-
+UnityScript being so different from JavaScript makes other pre-made JavaScript library non-compatible with UnityScript, which also makes it really difficult to find reference help. One half of the built in library in Unitys Monodevelop is Unitys own library and the other half is made using what seems to be .NET framework from MicroSoft
