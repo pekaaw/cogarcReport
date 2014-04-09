@@ -1,4 +1,5 @@
 \begin
+\chapter{UnityScript}
 In Unity a user can use several different languages to script their games. Boo, C#, JavaScript and Shader (used for writing shaders).
 While Boo and C# use the standard implementation and is easily referenced the JavaScript used in Unity is not.
 % Help Hvordan setter jeg inn http://wiki.unity3d.com/index.php/UnityScript_versus_JavaScript ?
@@ -10,9 +11,7 @@ Some of the major differences between Unitys JavaScript (henceforth named UnityS
 \texttt{itemize}
 \begin{itemize}
 	\item Classes.
-	\item Restricted dynamic typing.
 	\item Different privacy.
-	\item No delete.
 	\item Not JavaScript library compatible.
 \end{itemize}
 
@@ -21,14 +20,15 @@ JavaScript have no concept of classes as it is a prototypical language, meaning 
 Properties can be added or deleted at will in runtime, this is true for both members of the object and functions. UnityScript is much more object oriented with strongly typed and defined classes that cannot be changed in runtime (the exception to this rule is reflection).
 This makes it difficult to work with UnityScript if you have little experience using it, or have yet to find out that the difference between JavaScriptand UnityScript
 
-\subsection {Restricted dynamic typing}
-While both JavaScript and UnityScript both have dynamic typing it is much more restricted in UnityScripy. % Blah blah blah
+
 
 \subsection {Different privacy}
 UnityScript, being structured like other object oriented languages have the usual levels of privacy of members within a class being markedas either Private, Protected or Public. JavaScript have per function privacy. Meaning a variable declared in a function is available in the entire function but not
 outside of the function.
 
-\subsection {No delete}
-In UnityScript there is no way to delete a variable after is has been created or instantiated other than letting it go out of scope. This makes it tricky to work with if you are used to managing the memory yourself.
 \subsection {Not JavaScript library compatible}
 UnityScript being so different from JavaScript makes other pre-made JavaScript library non-compatible with UnityScript, which also makes it really difficult to find reference help. One half of the built in library in Unitys Monodevelop is Unitys own library and the other half is made using what seems to be .NET framework from MicroSoft
+
+% I guess end subsection here
+
+\subsection {Something something MonoDevelop}
