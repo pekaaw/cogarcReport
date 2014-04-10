@@ -2,29 +2,24 @@
 \chapter{Unity Serialization}
 Unity operates with two memory spaces. A native memory space belonging in to the C++ side of the code and the more managed DLL side that comes from scripts.
 The managed side memory is where all the data from scripts that users make are put.
-To use the data Unity does something called serialization and deserialization during a assembly reload. What happens is that it pulls all the data out of the managed side, creates an
-internal representation of the data on the C++ side, destroys all the memory from the managed side, reloads the assemblies and then
+To use the data Unity does a serialization and deserialization during a assembly reload. What happens is that it pulls all the data out of the managed side, creates an internal representation of the data on the C++ side, destroys all the memory from the managed side, reloads the assemblies and then
 re-serialize the data from C++ into the managed side.
-The serialization happens when the system updates its assembly files which is when the Editor or the system reloads an updated assembly, when the user enter and /or 
-exits play mode and when the scene is loaded/ saved.
+The serialization happens when the system updates its assembly files which is when the Editor or the system reloads an updated assembly, when the user enter or exits play mode and when the scene is loaded or saved.
 A serialization can therefore happen rather frequently or rarely, depending on the work-flow of the user and what the user is currently doing.
-This is all well and good, until you get into one of the few corner cases where your data does not serialize into C++ and gets destroyed.
 
-Unity is only able to serialize basic data types plus those already defined within the MonoDevelop system that is part of Unity.
-What this means is that if Unity does not know explicitly that the data are to be serialized or if it is unable
-to serialize it, it will simply be destroyed. Most classes will not be serialized unless they have data that Unity 
-can recognize is being used, struct can not be serialized, private members to a script will not be serialized unless Unity finds a explicit reference to it outside of the script, arrays containing complex data is likely not to get serialized.
+Unity is only able to serialize basic data types plus those already defined within Unity such as the GameObject class, Transform object and such.
+What this means is that when Unity does not know explicitly that the data are to be serialized or if it is unable to serialize it, it will simply be destroyed. Most classes will not be serialized unless they have data that Unity can recognize is being used, struct can not be serialized, private members to a script will not be serialized unless Unity finds a explicit reference to it outside of the script, arrays containing complex data is likely not to get serialized.
 However, there are a few ways to make sure Unity knows that the data shall be preserved not destroyed:
 \texttt{enumerate}
 \begin{enumerate}
 	\item Make the data field public
-	\item Mark the field as serialize-able (@SerializeField in JavaScript and [SerlializeField] in C#)
-	\item Mark the class as serialize-able (@Serialize in JavaScript and [Serialize] in C#)
+	\item Mark the field as serialize-able (@SerializeField in Unity JavaScript and [SerlializeField] in C#)
+	\item Mark the class as serialize-able (@Serialize in Uniy JavaScript and [Serialize] in C#)
 	\item Make a class that derives its base type from ScriptableObject
 \end {enumerate}
 
 By having the data marked in either of those ways or a combination of them will ensure that Unity will try to serialize it if it can.
-But there are a few things that Unity can not easily serialize, even if it adhere to the previously mentioned guidelines, and most notably it can not serialize an array of normal objects where the objects contain data that Unity does serialize.
+But there are a few things that Unity can not easily serialize, even if it adhere to the previously mentioned guidelines, and most notably it can not serialize an array of normal objects where the objects contain data that Unity does serialize, not even a partial seerialization where only some data is destroyed.
 It can serialize an array of objects that is derived from ScriptableObject. What the serialize will do is serialize each object in the
 array individually and put a pointer into the array. To make this work the ScriptableObject derived class has to be in its own
 C# file.
@@ -36,3 +31,4 @@ For the cubes design we made a class named BoxDesign that was intended to contai
 By following the guidelines from Unity on how to make the class serialize we made the class derive from ScriptableObject and marked all non-public fields with @SerializeField and marked the entire class with @Serialize, but no matter what we tried to do the array we put the data into did not survive the assembly reload.
 It took most of the group the better part of three weeks of work and research on the matter to find a solution.
  After an enormously amount of attempts and fixes we ended up with a solution that while maybe not the best is reliable and functional. The solution was to encode the design into a JSON string and store the resulting string since strings are supported by the Unity serialization, then when we want to get the data for the cubes we decode the JSON string back into our BoxDesign class and store them in a array that we can then use in the rest of our code.
+ 
