@@ -1,0 +1,43 @@
+\begin
+\chapter{Implementation}
+
+The project is built using Unity as the driving game engine and Vuforia for Augmented Reality capabilities. The mini games are programmed in MonoDevelop using Unity JavaScript.
+
+%Inkluder figur til klasse hierachi her
+
+Taking advantage of Unity component based design have split the different game elements into several scripts that are attached to game objects in the game scene.
+
+\texttt{enumerate}
+\begin{enumerate}
+	\item AR Camera.
+	\item FrameMarker Container
+	\item Cube Container
+	\item Realworldaxis Visualizer
+	\item Scripts
+\end{enumerate}
+
+AR Camera:
+The AR Camera is part of the Vuforia library and plug-in for Unity. It gives us as developers a camera to manipulate either in our gave world or to manipulate the objects in our world around.
+
+Frame Marker Container:
+
+The Vuforia library scans each update from the camera for recognizable objects that is stored in the marker database. It can track simple geocentrically objects, images that matches an identical image in the database and it can track frame markers. These are squares with a black outline with black and white squares around the edges. Vuforia is very good at finding and tracking the frame markers and can track at the very least ten frame markers without any problems. The other markers are restricted to one at a time.
+Although it can track many frame markers at a time without it taking up a considerate amount of processing power it is still limited by how many it can find which is very dependent on the camera of the device as well as the markers. If the resolution of the camera is too low the data that Vuforia has to work with will be degraded and it will give Vuforia a very hard time finding the markers in the frame and they are then easily lost. The quality and size of the markers also play a role in how well Vuforia can track. If they are too small or are not well printed they become hard to find and track. Since the frame markers only need to have a black edge around the marker with white and squares inside of the marker as well as the outside is customizable and can use any colour or images as long as the black edge and squares are easily seen by the camera.
+The container have a script that is used to make sure that the Frame Markers get paired up with a cube so the cube can follow the marker.
+Inside the container is where we have put all the frame markers. Vuforia comes with 255 different frame markers that can be used. We have for simplicity sake during development used marker 0-9, but these can be exchanged to any of the other markers in the library.
+
+Cube Container:
+
+The Cube Container itself is just a empty object that we place ten objects inside. These objects will then be used as the objects that will be shown on the screen as the augmented objects. At the moment it contains cubes only, hence the name.
+The cubes contain three collider boxes and a script that activates when one of the colliders collides with an other object. We use three colliders alinged to three different axis to determine the position of the other collider relative to the cube. We did it this way because we there was no way with the current API in Unity to get the position of the other object, we would only get the fact that there was a collision and no other data.
+
+Realworldaxis Visualizer:
+
+This is a container that has one script and a cube cylinder thing that Jakob made that Jakob made to visualize how the axis are relative to how the device is being held, I think we can move the script to be someplace else and thusly not have the object visual neither in the scene nor in the hierachy.
+
+Scripts:
+
+The script object is a collection of all the scripts that our games need but did not have to be connected to any object. Most importantly this object contains the Level Creator script which will set all the data that is needed for a game. This script shows with a custom made inspector in Unity to make is easy to edit exsisting games or to create a new game by mixing rules and the design of cubes.
+%Sette inn en tutorial på hvordan man bruker den kanskje?
+\subchapter{Level Creator}%Tror jeg?
+
