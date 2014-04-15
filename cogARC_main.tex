@@ -43,57 +43,62 @@
 \listoftables
 
 % Put introduction here
-\chapter{Introduction}
+\part{Introduction}
+	
+	\chapter{Introduction}
 	\label{chap:introduction}
 	\input{includes/cogARC_introduction}
 
-\chapter{Project}
-	\label{chap:project}
+	\chapter{Project}
+		\label{chap:project}
 
-	\section{Description and goals}
-	\input{includes/cogARC_project_description_and_goals}
+		\section{Description and goals}
+		\input{includes/cogARC_project_description_and_goals}
 
-	\section{Objectives}
-	\input{includes/cogARC_project_objectives}
+		\section{Objectives}
+		\input{includes/cogARC_project_objectives}
 
-	\section{Background and history}
-	\input{includes/cogARC_background_and_history}
+		\section{Background and history}
+		\input{includes/cogARC_background_and_history}
 
+\part{Development}
 
-\chapter{Development}
-	\label{chap:development}
+	\chapter{Development}
+		\label{chap:development}
 
-	\section{Schedule}
-	\input{includes/cogARC_schedule}
-	Here is a reference to chapter \ref{chap:project}. \comment{We can remove this}
+		\section{Schedule}
+		\input{includes/cogARC_schedule}
+		Here is a reference to chapter \ref{chap:project}. \comment{We can remove this}
 
-	\section{Development process}
-	\input{includes/cogARC_development_process}
-
-
-\chapter{Unity}
-	\label{chap:Unity}
-	\input{includes/cogARC_unity}
+		\section{Development process}
+		\input{includes/cogARC_development_process}
 
 
-\chapter{UnityScript}
-	\label{chap:UnityScript}
-	\input{includes/cogARC_unityscript}
+	\chapter{Unity}
+		\label{chap:Unity}
+		\input{includes/cogARC_unity}
 
 
-\chapter{MonoDevelop}
-	\label{chap:MonoDevelop}
-	\input{includes/cogARC_MonoDevelop}
+	\chapter{UnityScript}
+		\label{chap:UnityScript}
+		\input{includes/cogARC_unityscript}
+
+\part{Tools}
+
+	\chapter{MonoDevelop}
+		\label{chap:MonoDevelop}
+		\input{includes/cogARC_MonoDevelop}
 
 
-\chapter{Version Control}
-	\label{chap:VersionControl}
-	\input{includes/cogARC_version_control}
+	\chapter{Version Control}
+		\label{chap:VersionControl}
+		\input{includes/cogARC_version_control}
 
+\part{Summary}
 
-\chapter{Afterword}
-	\label{chap:afterword}
-	\input{includes/cogARC_afterword}
+	\chapter{Afterword}
+		\label{chap:afterword}
+		\input{includes/cogARC_afterword}
 
 
 
@@ -101,9 +106,11 @@
 \bibliographystyle{classes/gucthesis}
 \bibliography{includes/cogARC_bibliography}
 
+\part{Appendices}
+
 \appendix %after this line all chapters will have leters instead of numbers
-\appendixpage
-\addappheadtotoc
+%\appendixpage
+%\addappheadtotoc
 
 % Examples
 \input{includes/example_packages}
