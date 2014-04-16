@@ -6,17 +6,22 @@
 % For utf8 encoded .tex files
 \usepackage[utf8]{inputenc}
 
+% For colouring text
+\usepackage[usenames,dvipsnames]{color}
+
 % For cross references in pdf
 \usepackage[pdftex]{graphicx,hyperref}
-
-% For colouring text
-\usepackage{color}
+\hypersetup{
+	colorlinks=true,
+	filecolor=blue,
+	urlcolor=RoyalBlue
+}
 
 % For appendix title
 \usepackage{appendix}
 
 % For glossaries
-\usepackage{glossaries}
+\usepackage[nopostdot]{glossaries}
 \input{includes/cogARC_glossaries}
 \makenoidxglossaries
 
