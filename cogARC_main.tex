@@ -15,6 +15,11 @@
 % For appendix title
 \usepackage{appendix}
 
+% For glossaries
+\usepackage{glossaries}
+\input{includes/cogARC_glossaries}
+\makenoidxglossaries
+
 % Remove '%' in front of \renewcommand the parent command
 
 % Create command for commenting
@@ -109,10 +114,21 @@
 		\input{includes/cogARC_afterword}
 
 
+\todo{Remove this when people know how to use glossaries or before delivery}
+Here is an example on how to use glossaries. We can for example use the word
+\gls{ECMAScript}. Now we get the text ECMAScript with a link to the glossary
+list. In the glossary list there will also be a link to where this is 
+referenced in the document. The same applies for \gls{serialization}.
+
+
 
 % References
 \bibliographystyle{classes/gucthesis}
 \bibliography{includes/cogARC_bibliography}
+
+% Glossary list
+\printnoidxglossary[sort=word]
+
 
 \part{Appendices}
 
