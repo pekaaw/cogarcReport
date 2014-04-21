@@ -4,6 +4,7 @@ The project is built using Unity as the game engine and Vuforia for Augmented Re
 
 Taking advantage of Unity component based design have split the different game elements into several scripts that are attached to game objects in the game scene.
 
+The game objects are as following
 \begin{enumerate}
 	\item AR Camera.
 	\item FrameMarker Container
@@ -29,10 +30,12 @@ The cubes contain three collider boxes and a script that activates when one of t
 
 Realworldaxis Visualizer:
 
-This is a container that has one script and a cube cylinder thing that Jakob made that Jakob made to visualize how the axis are relative to how the device is being held, I think we can move the script to be someplace else and thusly not have the object visual neither in the scene nor in the hierachy.
+This is a container that has one script and a cube cylinder thing that Jakob made so that Jakob can visualize the alignment of the axes in the real world compared to the Unity world.
+Jakob will flesh this one out further? I hope so.
+
 
 Scripts:
 
-The script object is a collection of all the scripts that our games need but did not have to be connected to any object. Most importantly this object contains the Level Creator script which will set all the data that is needed for a game. This script shows with a custom made inspector in Unity to make is easy to edit exsisting games or to create a new game by mixing rules and the design of cubes.
+The script object is a collection of all the scripts that our games and objects need but did not have to be connected to any object. Most importantly this object contains the Level Creator script which will set all the data that is needed for a game. This script shows with a custom made inspector in Unity to make is easy to edit exsisting games or to create a new game by mixing rules and the design of cubes.
 %Sette inn en tutorial på hvordan man bruker den kanskje?
 
