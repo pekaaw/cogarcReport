@@ -43,6 +43,9 @@
 % \O{}   \AA{}   \AE{}   you can also just leave a space and latex will remove it
 %                        eg,  H\o gskolen i Gj\o vik
 
+% \inlineHeader gives a header that does not show up in the table of content
+\newcommand{\inlineHeader}[1]{\addvspace{1.5em}\noindent\makebox[\textwidth][l]{\large\bfseries #1}}
+
 
 \begin{document}
 
