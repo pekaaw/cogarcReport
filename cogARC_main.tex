@@ -20,6 +20,9 @@
 % For appendix title
 \usepackage{appendix}
 
+% For footer on project frontpage
+\usepackage{fancyhdr}
+
 % For glossaries
 \usepackage[nopostdot]{glossaries}
 \usepackage{glossaries-babel}
@@ -45,16 +48,17 @@
 
 \input{includes/cogARC_data}
 
+% Create frontpages according to the school template
 \makefrontpages
 
 % Create project specific frontpage
-\clearpage
-\includegraphics[width=\textwidth]{includes/logo}
-\thispagestyle{empty}
+\input{includes/cogarc_frontpage}
 
 % Start counting pages after frontpage
 \clearpage
 \setcounter{page}{1}
+
+
 
 % Preface
 \input{includes/cogARC_preface}
@@ -62,6 +66,8 @@
 \tableofcontents
 \listoffigures
 \listoftables
+
+
 
 % Start with content and count from 1.
 \newpage
