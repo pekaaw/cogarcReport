@@ -14,6 +14,7 @@ Following is a list of decisions and changes we as a group made during the devel
 	\item 10.mar: We decided to look into detached / integrated use of a AR library.
 	\item 18.mar: Pictures that will be used as textures on the cubes must be in a folder called "/Resources/BoxDesign/" to be able to properly load them since we are not able to extract the path of where a texture is stored on disc.
 	\item 27.mar: The levels for mini games will be procedural generated unless you want to make a Wooords mini game, where the levels will be read from file since these levels can not be easily randomly generated.
+	\item 29.apr: The restart button have been removeed from the pause screen.
 \end{enumerate}
 
 \section{Framework instead of games}
@@ -35,3 +36,6 @@ This decision is due to a limitation in Unity. When you place a object in the ob
 
 \section{Procedural generation over predetermined levels}
 In the beginning of the development we were uncertain about whether we should create levels for the mini games with code or if it should be crafted by hand. We initially went for the possibility of both, however after discussing it with our empolyer we came to the conclusion that as many of the games as possible should have generated levels. The only mini game that is not suitable for random generation is mini game \#7: Wooord game, the Wooord game has a fingle file for each set up starting with the overall theme (example is: animal, this means that all the words are animal related), followed by a comma seperated sequence of what words should be on the cubes and on the line under is a comma seperated list of words that can be created with those words. To create more levels the file just have to continue with a new sequence of letters for the cubes to have and a new line of words that can be created.
+
+\section{The restart button has been removed from the pause screen}
+
