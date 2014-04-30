@@ -63,13 +63,15 @@
 
 
 
-% Preface
-\input{includes/cogARC_preface}
+% Preface (the * means do not give the chapter a number)
+\chapter*{Preface}
+	\label{chap:preface}
+	\input{includes/cogARC_preface}
+
 
 \tableofcontents
 \listoffigures
 \listoftables
-
 
 
 % Start with content and count from 1.
@@ -101,11 +103,18 @@
 		\input{includes/cogARC_related_work}
 
 
-\part{Development}
+\part{Design process}
 
 	\chapter{Specification}
 		\label{chap:specification}
 		\input{includes/cogARC_specification}
+
+	\chapter{Usability}
+		\label{chap:usability}
+		\input{includes/cogARC_usability}
+
+
+\part{Development process}
 
 	\chapter{Tools}
 		\label{chap:tools}
@@ -141,7 +150,17 @@
 		\input{includes/cogARC_development_changes}
 
 
+\part{Product}
+
+	\chapter{Visual }
+
+	\chapter{Future Development}
+
+
+
 \part{Summary}
+
+	\chapter{Conclution}
 
 	\chapter{Afterword}
 		\label{chap:afterword}
