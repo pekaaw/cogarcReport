@@ -17,6 +17,9 @@
 	urlcolor=RoyalBlue
 }
 
+% When linking to figures, link to their top, not the text underneat
+%\usepackage[hypcap]{caption}	% throws warning..
+
 % For appendix title
 \usepackage{appendix}
 
@@ -156,7 +159,10 @@
 
 \part{Product}
 
-	\chapter{Visual }
+	\chapter{Visual}
+
+	\chapter{Feedback}
+		\input{includes/cogARC_feedback}
 
 	\chapter{Future Development}
 
