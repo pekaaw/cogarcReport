@@ -111,6 +111,8 @@
 
 \part{Design process}
 
+	\chapter{Approach}
+
 	\chapter{Specification}
 		\label{chap:specification}
 		\input{includes/cogARC_specification}
@@ -135,7 +137,7 @@
 			\input{includes/cogARC_unity}
 
 		\section{Vuforia}
-			\input{includes/cogARC_unity}
+			\input{includes/cogARC_vuforia}
 
 		\section{MonoDevelop}
 			\input{includes/cogARC_MonoDevelop}
@@ -143,10 +145,14 @@
 		\section{GIT}
 			\input{includes/cogARC_version_control}
 
+		\section{LaTeX (\LaTeX)}
+			\input{includes/cogARC_LaTeX}
+
+
 	\chapter{Schedule}
 		\input{includes/cogARC_schedule}
 
-	\chapter{Development process}
+	\chapter{Process}
 		\input{includes/cogARC_development_process}
 
 	\chapter{UnityScript}
@@ -157,14 +163,33 @@
 		\label{chap:UnitySerialization}
 		\input{includes/cogARC_unity_serialization}
 
+	\chapter{Program structure}
+		\todo{Charts of how objects are connected.}
+		\todo{Represent parts of the class diagram to do point 3.3 in the 
+		product evaluation good.}
+
 	\chapter{Development changes and decisions}
 		\label{chap:Developmentchangesanddecisions}
 		\input{includes/cogARC_development_changes}
+
+	\chapter{Program data}
+		\todo{Write about the process we had for adding data. How Jakob 
+		implemented it at a late point when we were told that this was a 
+		"must do".}
 
 
 \part{Product}
 
 	\chapter{Visual}
+		\todo{Put a printscreen of program here}
+
+		\section{Program flow chart}
+			\todo{Put a chart here on the flow of the program.}
+
+	\chapter{Application data}
+		\todo{Which data are stored in the app and which data is sent to the
+				network? This should be a summary of what we have written under
+				development.}
 
 	\chapter{Feedback}
 		\input{includes/cogARC_feedback}
@@ -176,6 +201,7 @@
 \part{Summary}
 
 	\chapter{Conclution}
+		\input{includes/cogARC_conclution}
 
 	\chapter{Afterword}
 		\label{chap:afterword}
@@ -193,6 +219,11 @@ Example of references inside the document:
 
 
 
+\part{Appendices}
+
+\appendix %after this line all chapters will have leters instead of numbers
+%\appendixpage
+%\addappheadtotoc
 
 % References
 \bibliographystyle{classes/gucthesis}
@@ -201,12 +232,11 @@ Example of references inside the document:
 % Glossary list
 \printnoidxglossary[sort=word]
 
+\chapter{Time management}
+	\todo{Put the data from Toggl here}
 
-\part{Appendices}
 
-\appendix %after this line all chapters will have leters instead of numbers
-%\appendixpage
-%\addappheadtotoc
+
 
 % Examples
 % \input{includes/example_packages}
