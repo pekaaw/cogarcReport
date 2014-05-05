@@ -42,7 +42,7 @@
 %\renewcommand{\comment}[1]{}
 
 % Create command for todo things
-\newcommand{\todo}[1]{{\color{green}#1}}
+\newcommand{\todo}[1]{{\par\noindent\textbf{\textsc{\color{Gray}todo:}}\color{green}#1}}
 
 % Norwegian Characters,  needs the {} or to be separate from the next letters
 % \o{}   \aa{}   \ae{}   so at the end of a word you can use \o  \aa   \ae
@@ -87,7 +87,7 @@
 % Put introduction here
 \part{Introduction}
 	
-	\chapter{Introduction}
+	%\chapter{Introduction}
 		\setcounter{page}{2}	% Needed to get numbering right
 		\label{chap:introduction}
 		\input{includes/cogARC_introduction}
@@ -96,7 +96,7 @@
 		\label{chap:description_goals}
 		\input{includes/cogARC_description_and_goals}
 
-	\chapter{Objectives}
+	% \chapter{Objectives}
 		\label{chap:objectives}
 		\input{includes/cogARC_objectives}
 
@@ -125,6 +125,8 @@
 
 
 \part{Development process}
+
+	\chapter{Theory}
 
 	\chapter{Tools}
 		\label{chap:tools}
