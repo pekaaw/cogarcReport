@@ -29,6 +29,41 @@ Woords is a game where the player is presented with a jumble of words and a them
 In the original design document we got there was mention of having the loading screen both instructions for the game and a global leader-board. Unity does not work well with net based activities 
 
 \section{Detached / Integrated AR library}
+\label{sect:input_handling}
+When we started developing, none of us knew how Vuforia worked. Because of this
+we had no specific plan for how we should handle the input. As we got into it,
+we found that Vuforia gives us coordinates in space relative to the input
+device / camera. From what we saw in the design document we wanted depth in the
+games. We think this is logical since we try to combine the real 3D world with
+our digital world presentation. Since we already got coordinates in space, we
+thought that the input was convenient.
+
+Nevertheless, the input did not fit our needs perfectly. In the "Total Sum"
+game (\ref{game:total_sum}), we were building a tower to obtain the right
+answer. I. e. "Combining Numbers" game (\ref{game:combining_numbers}) we were
+putting cubes side by side in an horizontal fashion. We asked ourself how this
+could be done when the camera could be all over the place.
+
+One option could be to ask the player to have the camera only in one position
+and then trust the user to obey our instructions. If trusting the user can be
+avoided, we think we should. This reduces relieves the user from potentially many
+prerequisites. It also reduce the risk of complaint on the software when users
+fail to follow the instructions and do not understand why the program doesn't
+work as expected.
+
+\paragraph{}
+
+when we saw that the
+design document specified the creation of towers andBecause of this we thought that the input we
+got was convenient
+
+That again revealed the problem about
+
+\todo{Describe in more details how vuforia gives coordinates on the screen.}
+
+At a later point we were made aware about a model where we put a layer between 
+the input and placement of the cube. 
+
 Per Kristian said to write about this in the report
 
 \section{Putting textures in a special folder}
