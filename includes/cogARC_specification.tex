@@ -8,22 +8,25 @@
 \section{Functional requirements}
 We did not get any functional requirements from our employer. There was
 some requirements that would have to be there to make the program do what the
-design document specified. The markers on the cubes would have to be seen. This
-is definitely an issue when that functionality is created, but in our case we
-have used the library \gls{Vuforia} for that. This means that we had no
-influence on the direct observation on the cubes. Vuforia would analyze images
-from the camera and give us positions of the different trackers when they were
-observed. In our situation, the chance we had to influence here lies in how we
-handle the input we get. We have written more about this opportunity in section
-\ref{sect:input_handling}
+design document specified. The markers on the cubes would have to be seen. This is definitely an issue when that functionality is created, but in our case we have used the library \gls{Vuforia} for that. This means that we had no influence on the direct observation on the cubes. Vuforia would analyze images from the camera and give us positions of the different trackers when they were observed. In our situation, the chance we had to influence here lies in how we handle the input we get. We have written more about this opportunity in section \ref{sect:input_handling}.
 
 \paragraph{Logging}
-Our employer originally wanted us to log the hand movements of the user when the user is playing the game. With the META SpaceGlasses this is supposedly possible, but as of the writing of this report the SDK for the SpaceGlasses have yet to ship. In the beginning of the project we looked into doing this with the technology we were going to use for the project, Unity and Vuforia. We looked into this, but found that, neither Unity or Vuforia support any kind of tracking of hands. We brought this issue to our employer and after telling him of our findings we were told that we could then drop logging of the players hand movements altogether.
-We tough this also meant that we would then drop all logging in the game (user high-score list not withstanding). But about two weeks before the due date it was brought to our attention that logging was essential for our employer to have. So with very little time left of the project we suddenly had to add logging of the user interaction and store the information in a way that was both accessible and useful to our employer.
-To fullfill these requirements we had the help of our supervisor Simon McCallum to set up a web server where we could post our data to.
-The data we send is username (chosen by the user in the game, we use a special identifier if the user-name is not set), what score the player currently has, what game is being played, what level of that mini-game is being played, event type, event data and lastly time. 
-
-\todo{Make Jakob expand this segment.}
+Our employer originally wanted us to log the hand movements of the user when the user is playing the game. With the META SpaceGlasses this is supposedly possible, but as of the writing of this report the SDK for the SpaceGlasses have yet to ship. In the beginning of the project we looked into doing this with the technology we were going to use for the project, Unity and Vuforia. We looked into this, but found that, neither Unity or Vuforia support any kind of tracking of hands. We brought this issue to our employer and after telling him of our findings we were told that we could then drop logging of the players hand movements altogether. He said he also wanted logging of certain other events, but we could save this for last and do it if we had time to implement it.
+\\
+We thought this also meant that we would then drop all logging in the game (user high-score list not withstanding). But about two weeks before the due date it was brought to our attention that logging was essential for our employer to have. So with very little time left of the project we suddenly had to add logging of the user interaction and store the information in a way that was both accessible and useful to our employer.
+To fulfill these requirements we had the help of our supervisor Simon McCallum to set up a web server where we could post our data to. He set up two database tables to which our application sends data, one for keeping the scores as an online high-score list and one for the events our employer needs for his research.\\
+This part of the application was implemented based on verbal requests and some Skype messages with our employer and supervisor. The requirements were developed as we went along and were added and removed as we implemented and discussed. We didn't get a clear specification of how it should be, but we followed the last message as closely as we could and left commented-out code with instructions for finding some of the other data they had requested earlier. The following is a somewhat detailed description of what we implemented and our interpretation of the specification.
+\paragraph{Logging:High-Score}
+On completing all the levels of the selected minigame the application will send final score, username (chosen by the user in the game, we use a special identifier if the username is not set) and the ID number of the minigame selected to the online high-score list. The minigame ID number is a number from 1-6 for the individual minigames and a higher number if more minigames are played in succession.
+\paragraph{Logging:Events}
+During each minigames, events are created and stored in an array. After each level of of each minigame, events are sent to the server.
+Event types, events are made when:
+\begin{enumerate}
+	\item the player completes a goal in a minigame, for example matching a pair.
+	\item the player makes a mistake, for example setting up a wrong formation of 3x3 cubes in \nameref{game:pattern_memory}.
+	\item in \nameref{game:wo0ord_game} minigame only, the player sets up a word that was correct, but has already been checked and a different word has been confirmed in the meantime.
+\end{enumerate}
+The event-data consists of username, current score, minigame ID, current level in current minigame, event type, combined data of the cubes involved in the event and the time of the event. Event type is an integer 1-3 referring to how the event was made. The combined data of the cubes involved will for example spell out the word in \nameref{game:wo0ord_game} or the bit-sequence of colored and uncolored cubes in \nameref{game:pattern_memory}.\\
 
 \section{Operational requirements}
 Here is op
