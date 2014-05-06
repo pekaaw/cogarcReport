@@ -14,12 +14,16 @@ have used the library \gls{Vuforia} for that. This means that we had no
 influence on the direct observation on the cubes. Vuforia would analyze images
 from the camera and give us positions of the different trackers when they were
 observed. In our situation, the chance we had to influence here lies in how we
-handle the input we get. We have written more about this opportuity in section
+handle the input we get. We have written more about this opportunity in section
 \ref{sect:input_handling}
 
 \paragraph{Logging}
-\todo{Speaking with costas. He wanted logging, but we could not log the hand
-movements.}
+Our employer originally wanted us to log the hand movements of the user when the user is playing the game. With the META SpaceGlasses this is supposedly possible, but as of the writing of this report the SDK for the SpaceGlasses have yet to ship. In the beginning of the project we looked into doing this with the technology we were going to use for the project, Unity and Vuforia. We looked into this, but found that, neither Unity or Vuforia support any kind of tracking of hands. We brought this issue to our employer and after telling him of our findings we were told that we could then drop logging of the players hand movements altogether.
+We tough this also meant that we would then drop all logging in the game (user high-score list not withstanding). But about two weeks before the due date it was brought to our attention that logging was essential for our employer to have. So with very little time left of the project we suddenly had to add logging of the user interaction and store the information in a way that was both accessible and useful to our employer.
+To fullfill these requirements we had the help of our supervisor Simon McCallum to set up a web server where we could post our data to.
+The data we send is username (chosen by the user in the game, we use a special identifier if the user-name is not set), what score the player currently has, what game is being played, what level of that mini-game is being played, event type, event data and lastly time. 
+
+\todo{Make Jakob expand this segment.}
 
 \section{Operational requirements}
 Here is op
