@@ -2,7 +2,7 @@ Seeing that Konstantinos Boletsis had created a design document for us to follow
 
 
 Having the mini-games clearly defined ment that we could focus on other parts in the beginning of the project instead of having to design the games ourselves.
-This let us focus soley on the interaction of the user and the program we made during the early stages of the project.
+This let us focus solely on the interaction of the user and the program we made during the early stages of the project.
 
 It also let us test the technologies a lot more without having to design around the limitations of the frameworks.
 
@@ -12,23 +12,22 @@ Being used to having interactions purely in the digital space let us design in a
 
 This is not something we could do in this project. 
 We used a more emergent design process of trial and error to find out what worked and what did not work with using physical cubes along with a screen and camera.
-For instance testing lighting conditions to find out when the frame markers was most easily found by the camera \& Vuforia (they work best in a well lit area with few sharp lights that leaves highlights on the markers).
+For instance testing lighting conditions to find out when the frame markers was most easily found by the camera \& Vuforia (they work best in a well lit area with few sharp lights that gives reflections on the markers).
 
 We also discovered many other interesting things while testing, for instance that if the virtual cubes are a bit larger than the cubes themselves it looks more believable than if it just as big,
- this might be due to the nature of augmented reality, or it is a quirk of Vuforia but when a frame marker becomes partly occluded or untraceable but still visible enough that Vuforia recognizes it something peculiar happens.
+ this might be due to the nature of augmented reality, or it is a quirk of Vuforia, but when a frame marker becomes partly occluded or untraceable but still visible enough that Vuforia recognizes it something peculiar happens.
 Sometimes it looks like the viritual box is stuck even if the frame marker is moved or it can get a weird transformation, often making it appear a lot closer than it should be and more often than not also being at a odd angle.
 
 
-Early on we found out that Vuforia supports having viritual buttons on image targets (unlike frame targets Vuforia can only track five image targets at a time) which projects a augmented button on the screen that the user can press as if it was a real physical button.
+Early on we found out that Vuforia supports having viritual buttons on image targets (unlike frame targets Vuforia can only track five image targets at a time) which projects an augmented button on the screen that the user can press as if it was a real physical button.
 
 This would be a great addition to our project we tought and looked into adding viritual buttons.
-But we found that, sadly, Vuforia does not support having viritual buttons on frame markers which ment that if we wanted to have viritual buttons we would have to either stop using frame markers or make a second set of cubes with images.
+Sadly we found that when using frame markers, Vuforia does not support virtual buttons. That ment that if we wanted to have viritual buttons we would have to either stop using frame markers or make a second set of cubes with image targets.
 
-Using image targets comes with the downside that a maximum of five of targets can be tracked at a time, this would not do as the mini-games we are implementing require the ability to track up to ten targets at a time.
+Using image targets comes with the downside that a maximum of five images can be tracked at a time. This is because of increased complexity when analyzing the camera input. The mini-games we are implementing require the ability to track up to ten targets at a time, so the id\'ea of using image targets had to be discarded.
 
 Having another set of objects to track did not appear to be the best of ideas. 
 Already having ten cubes to track is already quite a lot and having another set of trackable objects would have led to more fustration than easy of use for the user.
 Ten cubes takes up a lot more physical space than one would originaly anticipate as they will end up being spread out to make it easier for the player.
 
-\todo{How did we approach the design task?}
 \todo{More?}
