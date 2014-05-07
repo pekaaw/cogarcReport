@@ -36,57 +36,13 @@
 \makenoidxglossaries
 
 % Make chapters continue on same page
+	% \makeatletter
+	% \renewcommand\chapter{\thispagestyle{plain}%
+	%                     \global\@topnum\z@
+	%                     \@afterindentfalse
+	%                     \secdef\@chapter\@schapter}
+	% \makeatother
 
-% \usepackage{etoolbox}
-% \makeatletter
-% \patchcmd{\chapter}{\if@openright\let\cleardoublepage\relax\else\let\clearpage\relax\fi}{}{}{}
-% \makeatother
-
-% \makeatletter
-% \renewcommand\chapter{\thispagestyle{plain}%
-%                     \global\@topnum\z@
-%                     \@afterindentfalse
-%                     \secdef\@chapter\@schapter}
-% \makeatother
-
-%\let\clearpage\relax\chapter{}
-\usepackage{titlesec}
-% \titleformat
-% 	{\chapter}	% command
-% 	[block]		% shape
-% 	{\bfseries\Large\itshape}			% format
-% 	{\thechapter}			% label
-% 	{0.5ex}			% separation
-% 	{\let\clearpage\relax}			% before-code
-% 	{}			% after-code
-% \titleformat
-% 	{\chapter}	% command
-% 	[block]		% shape
-% 	{\let\clearpage\relax\center\bfseries\Large}			% format
-% 	{\thechapter}			% label
-% 	{0ex}			% separation
-% 	{}			% before-code
-% 	{}			% after-code
-
-% \titleformat
-% {\chapter} % command
-% [display] % shape
-% {\bfseries\Large\itshape} % format
-% {Story No. \ \thechapter} % label
-% {0.5ex} % sep
-% {
-%     \rule{\textwidth}{1pt}
-%     \vspace{1ex}
-%     \centering
-% } % before-code
-% [
-% \vspace{-0.5ex}%
-% \rule{\textwidth}{0.3pt}
-% ] % after-code
-
-% \titleformat{\section}[wrap]
-% {\normalfont\bfseries}
-% {\thesection.}{0.5em}{}
 
 % Remove '%' in front of \renewcommand the parent command
 
