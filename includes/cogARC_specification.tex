@@ -17,24 +17,24 @@ We thought this also meant that we would then drop all logging in the game (user
 To fulfill these requirements we had the help of our supervisor Simon McCallum to set up a web server where we could post our data to. He set up two database tables to which our application sends data, one for keeping the scores as an online high-score list and one for the events our employer needs for his research.\\
 This part of the application was implemented based on verbal requests and some Skype messages with our employer and supervisor. The requirements were developed as we went along and were added and removed as we implemented and discussed. We didn't get a clear specification of how it should be, but we followed the last message as closely as we could and left commented-out code with instructions for finding some of the other data they had requested earlier. The following is a somewhat detailed description of what we implemented and our interpretation of the specification.
 \paragraph{Logging:High-Score}
-On completing all the levels of the selected minigame the application will send final score, username (chosen by the user in the game, we use a special identifier if the username is not set) and the ID number of the minigame selected to the online high-score list. The minigame ID number is a number from 1-6 for the individual minigames and a higher number if more minigames are played in succession.
+On completing all the levels of the selected mini-game the application will send final score, username (chosen by the user in the game, we use a special identifier if the username is not set) and the ID number of the mini-game selected to the online high-score list. The mini-game ID number is a number from 1-6 for the individual mini-games and a higher number if more mini-games are played in succession.
 \paragraph{Logging:Events}
-During each minigames, events are created and stored in an array. After each level of of each minigame, events are sent to the server.
-Event types, events are made when:
+During each mini-games, events are created and stored in an array. After each level of of each mini-game, events are sent to the server.
+Events are made when:
 \begin{enumerate}
-	\item the player completes a goal in a minigame, for example matching a pair.
+	\item the player completes a goal in a mini-game, for example matching a pair.
 	\item the player makes a mistake, for example setting up a wrong formation of 3x3 cubes in \nameref{game:pattern_memory}.
-	\item in \nameref{game:wo0ord_game} minigame only, the player sets up a word that was correct, but has already been checked and a different word has been confirmed in the meantime.
+	\item in \nameref{game:wo0ord_game} mini-game only, the player sets up a word that was correct, but has already been checked and a different word has been confirmed in the meantime.
 \end{enumerate}
-The event-data consists of username, current score, minigame ID, current level in current minigame, event type, combined data of the cubes involved in the event and the time of the event. Event type is an integer 1-3 referring to how the event was made. The combined data of the cubes involved will for example spell out the word in \nameref{game:wo0ord_game} or the bit-sequence of colored and uncolored cubes in \nameref{game:pattern_memory}.\\
+The event-data consists of username, current score, mini-game ID, current level in current mini-game, event type, combined data of the cubes involved in the event and the time of the event. Event type is an integer 1-3 referring to how the event was made. The combined data of the cubes involved will for example spell out the word in \nameref{game:wo0ord_game} or the bit-sequence of colored and uncolored cubes in \nameref{game:pattern_memory}.\\
 
 \section{Operational requirements}
 The goals of this project is to create a set of mini-games that:
 \begin{itemize}
-	\item Tests the players coginitivity and to slow down their cognitive decline.
-	\item Keeps track of the players cognitive perforance.
+	\item Tests the players cognitivity and to slow down their cognitive decline.
+	\item Keeps track of the players cognitive performance.
 	\item Track and document the cognitive changes.
-	\item Uses AR to provide a new experince.
+	\item Uses AR to provide a new experience.
 \end{itemize}
 
 \todo{More?}
