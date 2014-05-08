@@ -1,2 +1,22 @@
-\todo{Vuforia: Why...?}
-\todo{Vuforia: Generally how it works. Generally how it does not work. Generally how it make people cry.}
+To achieve augmentation in our program without having to program it ourselves we used Vuforia.
+Vuforia is a library that comes with packages for Android, iOS and as a Unity Extension.
+
+Since we are using Unity it made using Vuforia a quite good choice.
+Vuforia supports tracking of several different objects. It can track frame markers, image markers and simple geometrical objects.
+
+For our project we opted for the frame markers as we need to be able to track up to ten at a time without draining all the resources available as the program will be run primarily on a phone or tablet.
+For tracking frame markers Vuforia does a very good job as long as the frame markers are clearly visible for the camera detecting it.
+
+While Vuforia does a good job at tracking and finding frame markers it is still lacking in other areas.
+One of the biggest difficulties we had with Vuforia was the lack of documentation, insight into how it works and ability to manipulate the behavior of Vuforia.
+This is closely related to our problems as to what happens when Vuforia loses the tracking of a frame marker while it is still should be able to track it.
+We are not completely certain but we have experienced that lighting condition is what plays the most important role in this.
+What is normaly done for making Vuforia augment an object in Unity is that you add the frame marker into the scene that you want Vuforia to be able to track and as a child of that frame marker you 
+put the object(s) you want visible when Vuforia finds the marker.
+
+
+
+\todo{Not done yet.}
+
+%Ikke så god support for Unity
+%Havent updated last 6 months
