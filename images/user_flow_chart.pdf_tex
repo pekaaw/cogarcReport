@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{418.5215332bp}%
+    \setlength{\unitlength}{417.67070313bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,23 +48,23 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.24010325)%
+  \begin{picture}(1,1.24670361)%
     \put(0,0){\includegraphics[width=\unitlength]{images/user_flow_chart.pdf}}%
-    \put(0.46956131,0.85015915){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Main Menu}}}%
-    \put(0.50492389,1.13497126){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Quit}}}%
-    \put(0.0222725,0.85015915){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Play all games}}}%
-    \put(0.76201938,1.03079502){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Change}}}%
-    \put(0.75246193,1.00403415){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{username}}}%
-    \put(0.23062498,0.42389674){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Play 1 mini}}}%
-    \put(0.26025308,0.39713587){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{game}}}%
-    \put(0.00382298,0.54939191){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Start next game}}}%
-    \put(0.59667544,0.27097748){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Play}}}%
-    \put(0.59763119,0.24421661){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{level}}}%
-    \put(0.40648212,0.33405668){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Next level}}}%
-    \put(0.39614319,0.04733308){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Level finished}}}%
-    \put(0.68173677,0.60166537){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Pause menu}}}%
-    \put(0.63629932,0.78899145){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Return to main menu}}}%
-    \put(0.84516923,0.25759705){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{High score}}}%
-    \put(0.7536024,0.00764591){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{All levels done}}}%
+    \put(0.46848076,0.85596516){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Main Menu}}}%
+    \put(0.50391537,1.14135746){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Quit}}}%
+    \put(0.02028078,0.85596516){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Play all games}}}%
+    \put(0.76153459,1.036969){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Change}}}%
+    \put(0.75195767,1.01015362){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{username}}}%
+    \put(0.22905769,0.42883442){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Play 1 mini}}}%
+    \put(0.25874615,0.40201903){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{game}}}%
+    \put(0.00383077,0.59328971){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Start next game}}}%
+    \put(0.59585383,0.27560365){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Play}}}%
+    \put(0.59681152,0.24878827){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{level}}}%
+    \put(0.39378076,0.33881134){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Next level}}}%
+    \put(0.39491308,0.05150367){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Level finished}}}%
+    \put(0.68108844,0.60696518){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Pause menu}}}%
+    \put(0.62129889,0.78041332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Return to main menu}}}%
+    \put(0.84485382,0.26219596){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{High score}}}%
+    \put(0.75513755,0.00766151){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{All levels done}}}%
   \end{picture}%
 \endgroup%
