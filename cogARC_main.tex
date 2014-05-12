@@ -41,7 +41,7 @@
 
 % Make chapters continue on same page
 	% \makeatletter
-	% \renewcommand\chapter{\thispagestyle{plain}%
+	% \renewcommand\section{\thispagestyle{plain}%
 	%                     \global\@topnum\z@
 	%                     \@afterindentfalse
 	%                     \secdef\@chapter\@schapter}
@@ -98,139 +98,143 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 % Put introduction here
-\part{Introduction}
+\chapter{Introduction}
 	
-	%\chapter{Introduction}
+	%\section{Introduction}
 		\setcounter{page}{2}	% Needed to get numbering right
-		\label{chap:introduction}
+		\label{sec:introduction}
 		\input{includes/cogARC_introduction}
 
-	\chapter{Description and goals}
-		\label{chap:description_goals}
+	\section{Description and goals}
+		\label{sec:description_goals}
 		\input{includes/cogARC_description_and_goals}
 
-	\chapter{History and Background}
-		\label{chap:history_and_background}
+	\section{History and Background}
+		\label{sec:history_and_background}
 		\input{includes/cogARC_history_and_background}
 
-	\chapter{Related work}
-		\label{chap:related_work}
+	\section{Related work}
+		\label{sec:related_work}
 		\input{includes/cogARC_related_work}
 
 
-\part{Design process}
+\chapter{Design process}
+	\label{chap:design_process}
 
-	\chapter{Approach}
-		\label{chap:approach}
+	\section{Approach}
+		\label{sec:approach}
 		\input{includes/cogARC_approach}
 
-	\chapter{Specification}
-		\label{chap:specification}
+	\section{Specification}
+		\label{sec:specification}
 		\input{includes/cogARC_specification}
 
-	\chapter{Game descriptions}
-		\label{chap:game_descriptions}
+	\section{Game descriptions}
+		\label{sec:game_descriptions}
 		\input{includes/cogARC_game_descriptions}
 
-	\chapter{Usability}
-		\label{chap:usability}
+	\section{Usability}
+		\label{sec:usability}
 		\input{includes/cogARC_usability}
 
 
-\part{Development process}
+\chapter{Development process}
+	\label{chap:development_process}
 
-	\chapter{Theory}
-		\label{chap:theory}
+	\section{Theory}
+		\label{sec:theory}
 		\input{includes/cogARC_theory}
 
-	\chapter{Tools}
-		\label{chap:tools}
+	\section{Tools}
+		\label{sec:tools}
 
-		\section{Unity}
-			\label{chap:unity}
+		\subsection{Unity}
+			\label{subsec:unity}
 			\input{includes/cogARC_unity}
 
-		\section{Vuforia}
-			\label{chap:vuforia}
+		\subsection{Vuforia}
+			\label{subsec:vuforia}
 			\input{includes/cogARC_vuforia}
 
-		\section{MonoDevelop}
-			\label{chap:monodevelop}
+		\subsection{MonoDevelop}
+			\label{subsec:monodevelop}
 			\input{includes/cogARC_MonoDevelop}
 
-		\section{Third party libraries}
-			\label{chap:third_party_libraries}
+		\subsection{Third party libraries}
+			\label{subsec:third_party_libraries}
 			\input{includes/cogARC_3rd_party_libraries}
 			
-		\section{GIT}
-			\label{chap:git}
+		\subsection{GIT}
+			\label{subsec:git}
 			\input{includes/cogARC_version_control}
 
-		\section{LaTeX (\LaTeX{})}
-			\label{chap:latex}
+		\subsection{LaTeX (\LaTeX{})}
+			\label{subsec:latex}
 			\input{includes/cogARC_LaTeX}
 
 
-	\chapter{Schedule}
-		\label{chap:schedule}
+	\section{Schedule}
+		\label{sec:schedule}
 		\input{includes/cogARC_schedule}
 
-	\chapter{Process}
-		\label{chap:process}
+	\section{Process}
+		\label{sec:process}
 		\input{includes/cogARC_development_process}
 
-	\chapter{UnityScript}
-		\label{chap:UnityScript}
+	\section{UnityScript}
+		\label{sec:UnityScript}
 		\input{includes/cogARC_unityscript}
 
-	\chapter{Unity Serialization}
-		\label{chap:UnitySerialization}
+	\section{Unity Serialization}
+		\label{sec:UnitySerialization}
 		\input{includes/cogARC_unity_serialization}
 
-	\chapter{Program structure}
-		\label{chap:program_structure}
+	\section{Program structure}
+		\label{sec:program_structure}
 		\input{includes/cogARC_program_structure}
 
-	\chapter{Program data}
-		\label{chap:program_data}
+	\section{Program data}
+		\label{sec:program_data}
 		\input{includes/cogARC_program_data}
 
-	\chapter{AR library integration}
-		\label{chap:AR_library_integration}
+	\section{AR library integration}
+		\label{sec:AR_library_integration}
 		\input{includes/cogARC_AR_library_integration}
 
-	\chapter{Development changes and decisions}
-		\label{chap:Developmentchangesanddecisions}
+	\section{Development changes and decisions}
+		\label{sec:Developmentchangesanddecisions}
 		\input{includes/cogARC_development_changes}
 
 
-\part{Product}
+\chapter{Product}
+	\label{chap:product}
 
-	\chapter{Visual}
-		\label{chap:visual}
+	\section{Visual}
+		\label{sec:visual}
 		\input{includes/cogARC_visual}
 
-	\chapter{Application data}
-		\label{chap:application_data}
+	\section{Application data}
+		\label{sec:application_data}
 		\input{includes/cogARC_application_data}
 
-	\chapter{Feedback}
-		\label{chap:feedback}
+	\section{Feedback}
+		\label{sec:feedback}
 		\input{includes/cogARC_feedback}
 
-	\chapter{Future Development}
-		\label{chap:future_development}
+	\section{Future Development}
+		\label{sec:future_development}
 		\input{includes/cogARC_future_development}
 
 
-\part{Summary}
+\chapter{Summary}
+	\label{chap:summary}
 
-	\chapter{Conclution}
-		\label{chap:conclution}
+	\section{Conclution}
+		\label{sec:conclution}
 		\input{includes/cogARC_conclution}
 
-	\chapter{Afterword}
-		\label{chap:afterword}
+	\section{Afterword}
+		\label{sec:afterword}
 		\input{includes/cogARC_afterword}
 
 
@@ -241,12 +245,12 @@ list. In the glossary list there will also be a link to where this is
 referenced in the document. The same applies for \gls{serialization}.
 
 Example of references inside the document:
-	Here is a reference to chapter \ref{chap:related_work}.
-	Here is a reference with the name of the chapter \nameref{chap:related_work}
+	Here is a reference to chapter \ref{sec:related_work}.
+	Here is a reference with the name of the chapter \nameref{sec:related_work}
 
 
 
-\part{Appendices}
+\chapter{Appendices}
 
 \appendix %after this line all chapters will have leters instead of numbers
 %\appendixpage
