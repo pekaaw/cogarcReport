@@ -1,4 +1,4 @@
-% \section{Detached / Integrated AR library}
+% \subsection{Detached / Integrated AR library}
 % \label{sect:input_handling}
 
 \todo{Clean up this chapter! The section deviding is done harshly, so it definitely have to be fixed!}
@@ -18,7 +18,7 @@ putting cubes side by side in an horizontal fashion. We asked ourself how this
 could be done when the camera could be all over the place.
 
 
-\section{Different approaches}
+\subsection{Different approaches}
 One option could be to ask the player to have the camera only in one position
 and then trust the user to obey our instructions. If trusting the user can be
 avoided, we think we should. This relieves the user from potentially many
@@ -62,5 +62,5 @@ In this model the markers would pass their transforms to the cubes as function p
 \end{itemize}
 
 
-\section{Solution}
+\subsection{Solution}
 In the end we decided to use the standard way, with a way to easier set different parents than the frame-markers and use filtering on the game-world state before testing for goal completion, rather than modifying the cubes positions before displaying them to the user. We found this gave the cubes fairly natural and more relate-able and forgivable behavior and to be better for playing the game as players. This way shows the player the instable recognition of the markers, allowing him to adapt to it while keeping the world state that is being tested with the game rules to be a little more stable than it seems. Not by using individual manipulation, but by universal filtering to make the state stable.

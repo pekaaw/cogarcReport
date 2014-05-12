@@ -17,22 +17,22 @@ Following is a list of decisions and changes we as a group made during the devel
 	\item 29.apr: The restart button have been removed from the pause screen.
 \end{enumerate}
 
-\section{Framework instead of games}
+\subsection{Framework instead of games}
 In the beginning we wanted to make sure that we would be able to create all the games described in the design document, and after looking into how we should structure the programs and what scripts and the like could be shared between each of the mini games we realized that on the programming side of them there was little difference. We therefore decided upon focusing making a framework to work within instead of making each mini game special.
 
-\section{Implementing a word game instead}
+\subsection{Implementing a word game instead}
 Shortly after beginning development and starting testing of the \gls{Frame Marker} we realized that the mini game \#5: Memory cubes as it was described in the design document was not implementable. Playing the game would make the player turn the cube upside down in the best case scenario or covering the frame marker and then turn the cube in the worst case. This caused us a lot of problems because of the way that Vuforia controls its frame markers. What Vuforia does when it is not tracking a frame marker or it loses the tracking is to deactivate the frame marker in the scene hierarchy which makes us unable to access any information contained within both the frame marker object itself and its children. This meant that we had no reliable way to detect if the player turned a cube to see the hidden mark under the cube or if it was simply re-detected by the tracker due either by the player obscuring the marker or something else obscuring the marker or the marker just being lost for a few frames. We brought this issue to our employer and after a short discussion we came to the conclusion to implement our own version of the mobile game Wooords and not make the mini game \#5: Memory cubes and also to not make mini game \#6: Path as the game was deemed % nu nu nu
 Woords is a game where the player is presented with a jumble of words and a theme. The goal is to find as many or all the words in the level by combining the letters to make words.
 
 
-\section{Dropping leader-board}
+\subsection{Dropping leader-board}
 In the original design document we got there was mention of having the loading screen both instructions for the game and a global leader-board. Unity does not work well with net based activities 
 
-\section{Putting textures in a special folder}
+\subsection{Putting textures in a special folder}
 This decision is due to a limitation in Unity. When you place a object in the object field in the inspector it will give us a new instance of that object, in this case a texture. What it does not give us is where it is stored. This would not be a problem if Unity was able to serialize our data, but since we are storing our objects as a JSON object due to Unity not being able to serialize it we have to store it ourself and the name of the texture is the only data we can rely on. The name however does not include the path of where the object is stored, so when we are extracting the data back from JSON objects into textures we only have the name of the texture. So to avoid any confusion of duplicate names and avoiding searching for the texture we constrict the location of where it can be placed into a sub-folder in the Resources folder of Unity.
 
-\section{Procedural generation over predetermined levels}
+\subsection{Procedural generation over predetermined levels}
 In the beginning of the development we were uncertain about whether we should create levels for the mini games with code or if it should be crafted by hand. We initially went for the possibility of both, however after discussing it with our employer we came to the conclusion that as many of the games as possible should have generated levels. The only mini game that is not suitable for random generation is mini game \#7: Wooord game, the Wooord game has a single file for each set up starting with the overall theme (example is: animal, this means that all the words are animal related), followed by a comma separated sequence of what words should be on the cubes and on the line under is a comma separated list of words that can be created with those words. To create more levels the file just have to continue with a new sequence of letters for the cubes to have and a new line of words that can be created.
 
-\section{The restart button has been removed from the pause screen}
+\subsection{The restart button has been removed from the pause screen}
 \todo{Jakob kan skrive om hvorfor den f\o{}rst \o dela alt, men at vi senere fikset den.}

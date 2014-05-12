@@ -1,11 +1,11 @@
-\section{Use Cases}
+\subsection{Use Cases}
 
 \paragraph{Use Cases}
 \todo{Flow chart of how the user plays the game. Isnt this made further down? Or is it different from the progam flow?}
 
-\section{Conceptual class diagram}
+\subsection{Conceptual class diagram}
 \todo{Create this?}
-\section{Functional requirements}
+\subsection{Functional requirements}
 We did not get any functional requirements from our employer. There was
 some requirements that would have to be there to make the program do what the
 design document specified. The markers on the cubes would have to be seen. This is definitely an issue when that functionality is created, but in our case we have used the library \gls{Vuforia} for that. This means that we had no influence on the direct observation on the cubes. Vuforia would analyze images from the camera and give us positions of the different trackers when they were observed. In our situation, the chance we had to influence here lies in how we handle the input we get. We have written more about this opportunity in chapter \ref{chap:AR_library_integration} \nameref{chap:AR_library_integration}.
@@ -28,7 +28,7 @@ Events are made when:
 \end{enumerate}
 The event-data consists of username, current score, mini-game ID, current level in current mini-game, event type, combined data of the cubes involved in the event and the time of the event. Event type is an integer 1-3 referring to how the event was made. The combined data of the cubes involved will for example spell out the word in \nameref{game:wo0ord_game} or the bit-sequence of colored and uncolored cubes in \nameref{game:pattern_memory}.\\
 
-\section{Operational requirements}
+\subsection{Operational requirements}
 The goals of this project is to create a set of mini-games that:
 \begin{itemize}
 	\item Tests the players cognitivity and to slow down their cognitive decline.
