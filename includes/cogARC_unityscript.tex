@@ -4,7 +4,7 @@ While Boo and C\#  use the standard implementation and is easily referenced the 
 Unitys JavaScript is quite different in many ways from the more standardly used JavaScript that is based on ECMAScript\cite{ECMAscipt} which is a standardized scripting
 language standardized by Ecma International.
 
-Some of the major and notable differences between Unitys JavaScript (henceforth named UnityScript) and ECMASCripts JavaScript (henceforth refered to as JavaScript):
+Some of the major and notable differences between Unitys JavaScript (henceforth named UnityScript) and ECMASCripts JavaScript (henceforth referred to as JavaScript):
 
 \begin{itemize}
 	\item Classes.
@@ -17,13 +17,13 @@ Some of the major and notable differences between Unitys JavaScript (henceforth 
 JavaScript have no concept of classes as it is a prototypical language, meaning it will have the properties that is assigned to it, but is not bound to them.
 Properties can be added or deleted at will in runtime, this is true for both members of the object and functions. UnityScript is much more object oriented with strongly typed and defined classes that cannot be changed in runtime (the exception to this rule is reflection).
 This makes it difficult to work with UnityScript if you have little experience using it, or have yet to find out that the difference between JavaScriptand UnityScript.
-UnityScript have also removed the prototypical properties of JavaScript by implementing it as a class based language. Meaning objects can not get additional functionality or be completely redifined at runtime. In UnityScript each .js file is implemented as a class by default. So when a developer creates a new .js file the Unity compiler and serialization system will add a class definition around the data within the file by default, so to call a funciton within a .js file you write "filename".function.
+UnityScript have also removed the prototypical properties of JavaScript by implementing it as a class based language. Meaning objects can not get additional functionality or be completely redefined at runtime. In UnityScript each .js file is implemented as a class by default. So when a developer creates a new .js file the Unity compiler and serialization system will add a class definition around the data within the file by default, so to call a function within a .js file you write "filename".function.
 
 \subsection {Different privacy}
-UnityScript, being structured like other object oriented languages have the usual levels of privacy of members within a class being markedas either Private, Protected or Public. JavaScript have per function privacy. Meaning a variable declared in a function is available in the entire function but not outside of the function.
+UnityScript, being structured like other object oriented languages have the usual levels of privacy of members within a class being marked as either Private, Protected or Public. JavaScript have per function privacy. Meaning a variable declared in a function is available in the entire function but not outside of the function.
+%
+%\subsection {var as a keyword is required}
+%If you do not use the keyword var in JavaScript the variable becomes a global variable as the var keyword is used to denote scoping. In UnityScript the var keyword is required when creating a variable to make sure the scoping is always the intended scope.
 
-\subsection {var as a keyword is required}
-If you do not use the keyword var in JavaScript the variable becomes a global variable as the var keyword is used to denote scoping. In UnityScript the var keyword is required when creating a variable to make sure the scoping is always the intended scope.
-
-\subsection {Not JavaScript library compatible}
+\subsection {UnityScript incompatible with JavaScript}
 UnityScript being so different from JavaScript makes other pre-made JavaScript library non-compatible with UnityScript, which also makes it really difficult to find reference help. One half of the built in library in Unitys Monodevelop is Unitys own library and the other half is made using what seems to be .NET framework from MicroSoft
