@@ -62,21 +62,20 @@
 %%  * Added a spill programmering option
 %%
 %% v1.0 2011/01/18
-%%  * Added infosek-bachelor, ingeniør
+%%  * Added infosek-bachelor, ingeniï¿½r
 %%
 %% v1.01 2011/05/10
 %%  * fixed front cover for both oneside and twoside
 %%
+%% v1.1 2012/05/22
+%%  * Added CIMET page
 %%
-%% TODO:
 %%
-%%  * Capitals for chapters in toc.
+%% v1.2 2014/05/10
+%%  Fixed Summary page
+%%  And last warning about page numbering.
 %%
-%%  * Other fonts for tt, sf etc.?
 %%
-%%  * Problems with nested itemize environments
-%%
-%%  * Font warnings (pdflatex)
 %%
 
 %% MACRO
@@ -85,16 +84,15 @@
 
 
 
-
 %% IDENTIFICATION
 
-\xdef\gucthesisdate{2011/05/10}
-\xdef\gucthesisversion{1.01}
+\xdef\gucthesisdate{2014/05/12}
+\xdef\gucthesisversion{1.2}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{classes/gucthesis}
   [\gucthesisdate\space
    v\gucthesisversion\space
-   Copyright (C) 2011 Ivar Farup and Simon McCallum]
+   Creative Commons Attribution 2014 Ivar Farup and Simon McCallum]
 
 %% CLASS FILE COMMANDS
 
@@ -108,6 +106,15 @@
 \RequirePackage{euler}
 \RequirePackage{lastpage}
 \RequirePackage{babel}
+\RequirePackage{enumitem}
+\setlist[enumerate]{itemsep=0mm, topsep=5pt, partopsep=0mm, parsep=0mm}
+\setlist[enumerate,1]{label=\arabic*., ref=\arabic*}
+\setlist[enumerate,2]{label=\arabic*., ref=\arabic*}
+\setlist[enumerate,3]{label=\alph*., ref=\alph*}
+\setlist[itemize]{itemsep=0mm, topsep=5pt, partopsep=0mm, parsep=0mm}
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=$\circ$}
+\setlist[itemize,3]{label=$\cdot$}
 %\RequirePackage[absolute]{textpos}
 
 
@@ -133,6 +140,10 @@
 \def\thesis@title{Use thesistitle to insert your title here.}
 \def\thesis@date{Use thesisdate to insert your date here.}
 \def\thesis@author{Use thesisauthor to insert your name here.}
+\def\thesis@hostInstitution{Use thesisHostInstitution to insert the location of the defense.}
+\def\thesis@publishertext{}
+
+% for bachelor theses with multiple authors
 \def\thesis@authorA{}
 \def\thesis@authorB{}
 \def\thesis@authorC{}
@@ -140,13 +151,20 @@
 \def\thesis@supervisorA{}
 \def\thesis@oppdragsgiver{}
 
+\def\thesis@juryA{}
+\def\thesis@juryB{}
+\def\thesis@juryC{}
+\def\thesis@juryD{}
+
+
 \def\gmt@keywords{}
 \def\gmt@desc{}
+\def\gmt@pub{}
 
-
-\def\thesis@titleNOR{Use thesistitle to insert your title here.}
+\def\thesis@titleNOR{Use thesistitleNor to insert your title here.}
 \def\gmt@keywordsNOR{}
 \def\gmt@descNOR{}
+\def\gmt@pubNOR{}
 
 \def\gmt@number{}
 \def\gmt@contact{}
@@ -163,13 +181,22 @@
 \def\thesissupervisorA#1{\def\thesis@supervisorA{#1}}
 \def\gmtoppdragsgiver#1{\def\thesis@oppdragsgiver{#1}}
 
+\def\thesisHostInstitution#1{\def\thesis@hostInstitution{#1}}
+\def\thesisPublisherText#1{\def\thesis@publishertext{#1}}
+\def\thesisjuryA#1{\def\thesis@juryA{#1}}
+\def\thesisjuryB#1{\def\thesis@juryB{#1}}
+\def\thesisjuryC#1{\def\thesis@juryC{#1}}
+\def\thesisjuryD#1{\def\thesis@juryD{#1}}
+
+
 
 \def\gmtkeywords#1{\def\gmt@keywords{#1}}
 \def\gmtdesc#1{\def\gmt@desc{#1}}
-
+\def\gmtpub#1{\def\gmt@pub{#1}}
 
 \def\gmtkeywordsNOR#1{\def\gmt@keywordsNOR{#1}}
 \def\gmtdescNOR#1{\def\gmt@descNOR{#1}}
+\def\gmtpubNOR#1{\def\gmt@pubNOR{#1}}
 \def\thesistitleNOR#1{\def\thesis@titleNOR{#1}}
 
 
@@ -192,6 +219,8 @@
     \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \newif\if@masters
+\newif\if@CIMET
+
 
 % Title page
 
@@ -222,7 +251,7 @@
 \def\thesistitlepage{
   \title{\thesis@title}
   \date{\thesis@date}
-  \author{\thesis@author \\ \thesis@authorA}
+  \author{\thesis@author}
   \maketitle
 }
 
@@ -373,33 +402,7 @@
 
 % Lists (itemize and enumerate)
 
-\renewenvironment{itemize}{\begin{list}{\ensuremath\bullet}%
-    {\labelwidth=.5em%
-      \labelsep=1em%
-      \leftmargin=\labelwidth%
-      \advance\leftmargin\labelsep%
-      \rightmargin=0pt%
-      \topsep=5pt%
-      \parsep=0pt%
-      \partopsep=\baselineskip%
-      \itemsep=\topsep%
-      }}{\end{list}}
-
-\newcounter{nenum}
-\renewenvironment{enumerate}{\begin{list}{\llap{\arabic{nenum}.}}%
-     {\usecounter{nenum}%
-      \labelwidth=.7em%
-      \labelsep=.8em%
-      \leftmargin=\labelwidth%
-      \advance\leftmargin\labelsep%
-      \rightmargin=0pt%
-      \topsep=5pt%
-      \parsep=0pt%
-      \partopsep=0pt%
-      \itemsep=\topsep%
-      }%
-   }{\end{list}}
-
+%% removed the old itemize material as it should be in a package enumitem
 %%
 %% GMT Frontpage by Kjetil:
 %%
@@ -416,44 +419,27 @@ Use $\backslash$useyear\{<year>\} to set year.
 \newcommand\gmt@firstpagetext{%
   \noindent Use this class with options\\ 
   ``MMT'' Masters i Medieteknikk,\\
+  ``MACS'' Masters in Applied Computer Science,\\
   ``MIS'' Masters i Informasjonssikkerhet,\\
   ``CIMET'' Erasmus mundus Masters in Colour Science,\\
   ``BSP'' Bachelor i Spillprogrammering,\\
   ``BRD'' Bachelor i drift av nettverk og datasystemer,\\
   ``BIS'' Bachelor i Informasjonssikkerhet,\\
   ``BPU'' Bachelor i Programvareutvikling, \\
-  ``BIND'' Bachelor i Ingeniørfad - data. 
+  ``BIND'' Bachelor i Ingeniï¿½rfad - data. 
 }
 
 \newcommand\gmt@secondpagetext{%
   \noindent Use this class with options\\ 
   ``MMT'' Masters i Medieteknikk,\\
+  ``MACS'' Masters in Applied Computer Science,\\
   ``MIS'' Masters i Informasjonssikkerhet,\\
   ``CIMET'' Erasmus mundus Masters in Colour Science,\\
   ``BSP'' Bachelor i Spillprogrammering,\\
   ``BRD'' Bachelor i drift av nettverk og datasystemer,\\
   ``BIS'' Bachelor i Informasjonssikkerhet,\\
   ``BPU'' Bachelor i Programvareutvikling, \\
-  ``BIND'' Bachelor i Ingeniør. 
-}
-
-\newcommand\gmt@imttext{%
-  \noindent
-  Avdeling for\\
-  informatikk og medieteknikk\\
-  H\o{}gskolen i Gj\o{}vik\\
-  Postboks 191\\
-  2802 Gj\o{}vik
-
-  \vskip 3em%
-
-  \noindent
-  Department of Computer Science\\
-  and Media Technology\\
-  Gj\o{}vik University College\\
-  Box 191\\
-  N-2802 Gj\o{}vik\\
-  Norway
+  ``BIND'' Bachelor i Ingeniï¿½r. 
 }
 
 	    
@@ -474,7 +460,7 @@ Use $\backslash$useyear\{<year>\} to set year.
 
 
 \DeclareOption{norsk}{
-   \@norskrue 
+   \@norsktrue 
    \@englishfalse
 }
 
@@ -505,7 +491,7 @@ Use $\backslash$useyear\{<year>\} to set year.
     	H\o{}gskolen &i Gj\o{}vik, &\gmt@frontpagesyear\\
     \end{tabular}
   }
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 }
 
 \DeclareOption{BRD}{%
@@ -518,20 +504,20 @@ Use $\backslash$useyear\{<year>\} to set year.
     	H\o{}gskolen &i Gj\o{}vik, &\gmt@frontpagesyear\\
     \end{tabular}
   }
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 }
 
 \DeclareOption{BIND}{%
   \renewcommand\gmt@firstpagetext{%
     \begin{tabular}{ccc}
 	Bacheloroppgave&&\\
-    	Bachelor i & ingeniørfag – data &  \\
+    	Bachelor i & ingeniï¿½rfag ï¿½ data &  \\
     	20 &ECTS&\\
     	Avdeling for& informatikk &og medieteknikk\\
     	H\o{}gskolen &i Gj\o{}vik, &\gmt@frontpagesyear\\
     \end{tabular}
   }
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 }
 
 \DeclareOption{BIS}{%
@@ -544,7 +530,7 @@ Use $\backslash$useyear\{<year>\} to set year.
     	H\o{}gskolen &i Gj\o{}vik, &\gmt@frontpagesyear\\
     \end{tabular}
   }
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 }
 
 \DeclareOption{BPU}{%
@@ -558,7 +544,7 @@ Use $\backslash$useyear\{<year>\} to set year.
     	H\o{}gskolen &i Gj\o{}vik, &\gmt@frontpagesyear\\
     \end{tabular}
   }
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 }
 
 
@@ -579,7 +565,27 @@ Use $\backslash$useyear\{<year>\} to set year.
 	   \gmt@CollegeNameText
 	 }
   \fi
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
+}
+
+\DeclareOption{MACS}{%
+  \@masterstrue
+  \if@norsk
+  	\renewcommand\gmt@firstpagetext{%
+  	  Masteroppgave\\
+  	  Master in Applied Computer Science\\
+	   30 ECTS\\
+	  \gmt@CollegeNameText
+ 	}
+  \else
+	\renewcommand\gmt@firstpagetext{%
+	   Master's Thesis\\
+	   Master of Applied Computer Science\\
+	   30 ECTS\\
+	   \gmt@CollegeNameText
+	 }
+  \fi
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 }
 
 
@@ -600,12 +606,13 @@ Use $\backslash$useyear\{<year>\} to set year.
  	  \gmt@CollegeNameText \gmt@frontpagesyear 
 	}
   \fi
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 % \def@masters
 }
 
 \DeclareOption{CIMET}{% not implemented yet
   \@masterstrue
+  \@CIMETtrue
   \if@norsk  
 	\renewcommand\gmt@firstpagetext{%
     	  Only english for CIMET thesis\\
@@ -619,17 +626,43 @@ Use $\backslash$useyear\{<year>\} to set year.
 	  \gmt@CollegeNameText
 	}
   \fi
-  \renewcommand\gmt@secondpagetext{\gmt@imttext}
+  \renewcommand\gmt@secondpagetext{\thesis@publishertext}
 }
 
 \ProcessOptions\relax
 
+
+\if@CIMET
+\else
+\thesisPublisherText{%
+  \noindent
+  Avdeling for\\
+  informatikk og medieteknikk\\
+  H\o{}gskolen i Gj\o{}vik\\
+  Postboks 191\\
+  2802 Gj\o{}vik
+  \vskip 3em%
+  \noindent
+  Department of Computer Science\\
+  and Media Technology\\
+  Gj\o{}vik University College\\
+  Box 191\\
+  N-2802 Gj\o{}vik\\
+  Norway
+}
+\fi
+
+
 %% FRONTPAGE GENERATION
 \newcommand\makefrontpages{%
 	\if@masters
-	  \makemastersfrontpages
+	  \if@CIMET
+	     \makeCIMETfrontpages
+	   \else
+	     \makemastersfrontpages
+	   \fi
 	\else
-		\makebachelorfrontpages
+	  \makebachelorfrontpages
 	\fi
 }
 
@@ -638,10 +671,12 @@ Use $\backslash$useyear\{<year>\} to set year.
   \begin{titlepage}%
     %\thispagestyle{empty}
     %\setcounter{page}\z@
+		\hypersetup{pageanchor=false}
     \let\footnotesize\small
     \let\footnoterule\relax
     \let \footnote \thanks
     \null\vfil
+    
     \vskip 165\p@
     \begin{center}%
       {\fontsize{20}{24}\selectfont \thesis@title}%
@@ -669,12 +704,80 @@ Use $\backslash$useyear\{<year>\} to set year.
   \null\vfil
   \vfill
   \vbox{\footnotesize{\gmt@secondpagetext}}
+		\hypersetup{pageanchor=true}
 }
+
+
+\newcommand\makeCIMETfrontpages{%
+    \begin{titlepage}%
+    % \thispagestyle{empty}
+    % \setcounter{page}\z@
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \let \footnote \thanks
+    \null\vfil
+    
+	\begin{center}
+		{\fontsize{16}{20}\selectfont Master Erasmus Mundus in \\ Color in Informatics and Media Technology (CIMET)\\}
+	\end{center}
+	%\vskip 165\p@
+    \vskip 3em
+	\begin{center}
+		\includegraphics[width=400pt]{CIMETlogo}
+      \medskip
+    \end{center}
+	%\vskip 165\p@
+    \vskip 3em
+	
+    \begin{center}%
+      {\fontsize{16}{18}\selectfont \thesis@title \\}%
+	  \vskip 1em
+	  {\fontsize{14}{16}\selectfont Master Thesis Report}%
+      \vskip 4em
+	  {\fontsize{14}{16}\selectfont Presented by}
+      \vskip 2em
+	  
+      {%\large
+        \lineskip .75em%
+        \begin{tabular}[t]{c}%
+          {\fontsize{14}{16}\selectfont \thesis@author \par} %\@author
+        \end{tabular}\par}%
+      % \vskip 1.5em%
+      % {\large Dato \par}%       % Set date in \large size.
+	  \vskip 2em
+	  {\fontsize{14}{16}\selectfont and defended at}
+      \vskip 2em
+	  {\fontsize{14}{16}\selectfont \thesis@hostInstitution}
+	  
+    \end{center}\par
+    \@thanks
+    \vfill
+    \vskip 1em
+	
+	{\fontsize{12}{14}\selectfont Academic Supervisor(s): \thesis@supervisor \\
+	\hspace*{50mm} \thesis@supervisorA}
+	\vskip 1em
+	{\fontsize{12}{14}\selectfont Jury Committee:\hspace*{5mm} \thesis@juryA \\
+	\hspace*{40mm} \thesis@juryB\\
+	\hspace*{40mm} \thesis@juryC\\
+	\hspace*{40mm} \thesis@juryD}
+	
+  \end{titlepage}
+
+  \newpage
+  \thispagestyle{empty}
+  \null\vfil
+  \vfill
+  \vbox{\footnotesize{\gmt@secondpagetext}}
+}
+
+
 
 \newcommand\makebachelorfrontpages{%
   \begin{titlepage}%
     %\thispagestyle{empty}
     %\setcounter{page}\z@
+		\hypersetup{pageanchor=false}
 
     \let\footnotesize\small
     \let\footnoterule\relax
@@ -720,48 +823,31 @@ Use $\backslash$useyear\{<year>\} to set year.
 	\par}
 %\addcontentsline{toc}{chapter}{Summary}
 %\thispagestyle{empty}
-\begin{tabular}{|l@{  }p{0.2\textwidth}|l|l|l|}
-		\hline
-	  Tittel: & \multicolumn{3}{ @{}p{0.6\textwidth}|}{\thesis@titleNOR} & Nr: \gmt@number \\
-		\cline{2-5}
-		& \multicolumn{3}{@{  }l|}{} & Dato: \gmt@frontpagesyear\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\hline
-		Deltakere: & \multicolumn{4}{@{  }l|}{\thesis@author}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{\thesis@authorA}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{\thesis@authorB}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{\thesis@authorC}\\
-		\hline
-		Veiledere: & \multicolumn{4}{@{\thesis@supervisor}l|}{}\\
-		\cline{2-5}
-		 & \multicolumn{4}{@{  }l|}{\thesis@supervisorA}\\
-		\hline
-		Oppdragsgiver: & \multicolumn{4}{@{  }l|}
+\begin{tabular}{p{3cm}@{  }p{0.2\textwidth}lll}
+	  Tittel: & \multicolumn{3}{@{}p{0.6\textwidth}}{\textbf{\thesis@titleNOR}} \\
+		& \multicolumn{4}{@{  }l}{}\\
+	Dato:	&  \gmt@frontpagesyear\\		
+		& \multicolumn{4}{@{  }l}{}\\
+	Deltakere: & \multicolumn{4}{@{  }l}{\thesis@author}\\
+		& \multicolumn{4}{@{  }l}{\thesis@authorA}\\
+		& \multicolumn{4}{@{  }l}{\thesis@authorB}\\
+		& \multicolumn{4}{@{  }l}{\thesis@authorC}\\
+	Veiledere: & \multicolumn{4}{@{\thesis@supervisor}l}{}\\
+		 & \multicolumn{4}{@{  }l}{\thesis@supervisorA}\\
+	Oppdragsgiver: & \multicolumn{4}{@{  }l}
        {\thesis@oppdragsgiver}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\hline
-		Kontaktperson: & \multicolumn{4}{@{  }p{0.6\textwidth}|}{\gmt@contact}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\hline
-		Stikkord & \multicolumn{4}{@{  }l|}
-        {\gmt@keywordsNOR}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{}l|}{}\\
-		\hline
-		\multicolumn{2}{|p{0.18\textwidth}|}{Antall sider: \pageref{LastPage}} & Antall vedlegg: \gmt@appnumber & \multicolumn{2}
-       {|l|}{Tilgjengelighet: \AA{}pen}\\
-		\hline
-		\multicolumn{5}{|l|}{Kort beskrivelse av bacheloroppgaven:}\\
-		\multicolumn{5}{|p{1.0\textwidth}|}{\gmt@descNOR}\\
-		\hline
+		& \multicolumn{4}{@{  }l}{}\\
+	Kontaktperson: & \multicolumn{4}{@{  }p{0.6\textwidth}}{\gmt@contact}\\
+		& \multicolumn{4}{@{  }l}{}\\
+	N\o{}kkeLord: & {\gmt@keywordsNOR}\\
+	Antall sider: & \pageref{LastPage} \\ 
+	Antall vedlegg: &  \gmt@appnumber \\
+	Tilgjengelighet: & \AA{}pen \\ % this needs updating \gmt@pubNOR}\\
+	
+		& \multicolumn{4}{@{  }l}{}\\
+\hline\\
+	\multicolumn{5}{l}{Kort beskrivelse av bacheloroppgaven:}\\
+	\multicolumn{5}{p{1.0\textwidth}}{\gmt@descNOR}\\
   \end{tabular}
 
 % this should be a function call so that the layout is done in a single place. This is currently bad coding but I do not have time to fix it at the moment.  I will fix this later.
@@ -774,48 +860,31 @@ Use $\backslash$useyear\{<year>\} to set year.
 	\par}
 %\addcontentsline{toc}{chapter}{Summary}
 %\thispagestyle{empty}
-\begin{tabular}{|l@{  }p{0.2\textwidth}|l|l|l|}
-		\hline
-	  Title: & \multicolumn{3}{@{}p{0.6\textwidth}|}{\thesis@title} & Nr: \gmt@number \\
-		\cline{2-5}
-		& \multicolumn{3}{@{  }l|}{} & Date: \gmt@frontpagesyear\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\hline
-		Participants: & \multicolumn{4}{@{  }l|}{\thesis@author}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{\thesis@authorA}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{\thesis@authorB}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{\thesis@authorC}\\
-		\hline
-		Supervisor: & \multicolumn{4}{@{\thesis@supervisor}l|}{}\\
-		\cline{2-5}
-		 & \multicolumn{4}{@{  }l|}{\thesis@supervisorA}\\
-		\hline
-		Employer: & \multicolumn{4}{@{  }l|}
-       {\thesis@oppdragsgiver}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\hline
-		Contact person: & \multicolumn{4}{@{  }p{0.6\textwidth}|}{\gmt@contact}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{  }l|}{}\\
-		\hline
-		Keywords & \multicolumn{4}{@{  }l|}
-        {\gmt@keywords}\\
-		\cline{2-5}
-		& \multicolumn{4}{@{}l|}{}\\
-		\hline
-		\multicolumn{2}{|p{0.18\textwidth}|}{Pages: \pageref{LastPage}} & Appendixes: \gmt@appnumber & \multicolumn{2}
-       {|l|}{Availability: Open}\\
-		\hline
-  	\multicolumn{5}{|l|}{Short description of the main project:}\\
-	  \multicolumn{5}{|p{1.0\textwidth}|}{\gmt@desc}\\
-		\hline
+\begin{tabular}{p{3cm}@{  }p{0.2\textwidth}lll}
+	  Title: & \multicolumn{3}{@{}p{0.6\textwidth}}{\textbf{\thesis@title}}\\
+		& \multicolumn{4}{@{  }l}{}\\
+	Date: & \gmt@frontpagesyear\\
+		& \multicolumn{4}{@{  }l}{}\\
+	Participants: & \multicolumn{4}{@{  }l}{\thesis@author}\\
+		& \multicolumn{4}{@{  }l}{\thesis@authorA}\\
+		& \multicolumn{4}{@{  }l}{\thesis@authorB}\\
+		& \multicolumn{4}{@{  }l}{\thesis@authorC}\\
+	Supervisor: & \multicolumn{4}{@{\thesis@supervisor}l}{}\\
+		 & \multicolumn{4}{@{  }l}{\thesis@supervisorA}\\
+	Employer: & \multicolumn{4}{@{  }l}{\thesis@oppdragsgiver}\\
+		& \multicolumn{4}{@{  }l}{}\\
+	Contact person: & \multicolumn{4}{@{  }p{0.6\textwidth}}{\gmt@contact}\\
+		& \multicolumn{4}{@{  }l}{}\\
+	Keywords: & \multicolumn{4}{@{  }l}{\gmt@keywords}\\
+	Pages: & \pageref{LastPage} \\
+	Appendixes: & \gmt@appnumber \\
+	Availability: & Open \\ % this needs updating to \gmt@pub}\\
+		& \multicolumn{4}{@{  }l}{}\\
+\hline\\
+		\multicolumn{5}{l}{Short description of the main project:}\\
+		\multicolumn{5}{p{1.0\textwidth}}{\gmt@desc}\\
   \end{tabular}
+
+		\hypersetup{pageanchor=true}
 
 }

@@ -30,7 +30,8 @@ work as expected.
 
 When we saw that the design document specified the creation of towers we came up with the idea to make use of the gyroscope that is found on many phones and tablets. The gyroscope allowed us to lock the input in to one or two axis for all the games. When the player was to build tower we could ignore horizontal connections and for all others we could ignore vertical connections. 
 
-\paragraph{Frame-marker to cubes models}
+\subsection{Frame-marker to cubes models}
+\label{subsec:framemarker_model} 
 Vuforia allows a small variety markers to give transforms(position, rotation and scale) to game-objects in unity. There is image-markers that can recognize an image even if it only sees a small part of the image. However the recommended max limit for image-markers was only five so at least for the cubes these were out of the question. There is also markers with shapes like cubes, cylinders, etc. but we had trouble getting these features to work, due to lack of documentation. And then there is the standard frame-marker which has to be completely visible to work but allows you to have up to 512 markers at once.\\
 The standard way of using vuforia with unity is to set the gameObject to be a child of the marker in the game hierarchy. It will then be moved around, scale and rotate as the marker does and it will only be visible or active when the marker is recognized. This way does not allow the use more than one marker to find an object, markers cannot be children of each other. 
 

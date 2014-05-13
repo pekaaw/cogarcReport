@@ -8,5 +8,18 @@ PlayerPrefsX is able to store vectors, quaternions, arrays and more.
 We used this library to store the list of high scores for each game. 
 By using PlayerPrefsX IntArray storing it was very easy to store a array of ten high scores for each game instead of having to either make a complex string to store it or fining another way of storing the scores.
 
-\paragraph{Boomlagoon.JSON}
-\todo{PK: write about JSONObject}
+\paragraph{Boomlagoon.{JSON}}
+Due to some problems we encountered with the \nameref{sec:UnitySerialization},
+we needed to be able to save and restore a structure in another way than the
+default one. We spent weeks trying to solve this problem. When we stopped
+looking for better ways to solve it, we had ended up on converting the 
+structure to {JSON} and save the whole thing as a string.
+Unity has some support for {JSON} with it's library called Simple{JSON} 
+\cite{SimpleJSON}. Simple{JSON} have the drawback that it only stores data
+as a string, which will make the restoration difficult. Instead we found
+another implementation of JSON that handles different types.
+
+Boomlagoon.{JSON} is have two main types that we have used. That is 
+{JSONO}bject and {JSONV}alue.
+
+\todo{PK: Finish this..}
