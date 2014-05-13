@@ -26,7 +26,7 @@ Since one of the games required the player to build towers with the cubes and si
 
 From a standard unity function we got the rotation of the real world from the gyroscope.The optimal thing to do would be to rotate the unity-world to be the same as this rotation. This however was not possible and the markers use global position so we couldn't make a virtual world object in unity to rotate.\\
 We could have added the rotation to the cubes transforms, but we only needed to know the direction of collisions. So we made an object that rotates as the rotation from the gyroscope and that contains a child object thats local position is translated one unit up from parent object. This gives us a unit vector for the direction up in the real world.
-\\
+
 
 \begin{wrapfigure}{r}{0.4\textwidth}
         \capstart
@@ -38,7 +38,6 @@ We could have added the rotation to the cubes transforms, but we only needed to 
         \vspace{-10pt}
         \label{fig:Vector_Angle_model}
 \end{wrapfigure}
-
 
 Then on collision we can take the direction-vector between the colliding cubes. 
 \[
@@ -57,11 +56,11 @@ Then on collision we can take the direction-vector between the colliding cubes.
 %         \label{fig:Angle_Formula}
 % \end{wrapfigure}
 
-\paragraph{Degree vertical}
+\subsubsection{Degree vertical}
 By normalizing the vectors you can use the scalar product or dot product between the two vectors to find the vertical angle between the cubes. However Unity actually has a function for finding the angles between vectors, so most of our difficulty lay in testing that everything worked the way we thought and rotations were not inverted, incorrectly rotated or too instable to use.
 
 
-\paragraph{Calculate the angle}
+\subsubsection{Calculate the angle}
 \newcommand{\norm}[1]{\lvert #1 \rvert}
 
 If:
