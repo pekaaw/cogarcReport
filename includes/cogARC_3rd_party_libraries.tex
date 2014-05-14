@@ -9,6 +9,18 @@ We used this library to store the list of high scores for each game.
 By using PlayerPrefsX IntArray storing it was very easy to store a array of ten high scores for each game instead of having to either make a complex string to store it or fining another way of storing the scores.
 
 \paragraph{Boomlagoon.{JSON}}
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\capstart
+	\centering
+	\vspace{-20pt}
+	\includegraphics[width=0.28\textwidth]{images/Boomlagoon.png}
+	\vspace{-20pt}
+	\caption[Boomlagoon {L}td.]{Boomlagoon {L}td.}
+	\label{fig:boomlagoon}
+	\vspace{-10pt}
+\end{wrapfigure}
+
 Due to some problems we encountered with the \nameref{sec:UnitySerialization},
 we needed to be able to save and restore a structure in another way than the
 default one. We spent weeks trying to solve this problem. When we stopped
@@ -17,9 +29,27 @@ structure to {JSON} and save the whole thing as a string.
 Unity has some support for {JSON} with it's library called Simple{JSON} 
 \cite{SimpleJSON}. Simple{JSON} have the drawback that it only stores data
 as a string, which will make the restoration difficult. Instead we found
-another implementation of JSON that handles different types.
+another implementation of JSON that manage to handle different types.
 
-Boomlagoon.{JSON} is have two main types that we have used. That is 
-{JSONO}bject and {JSONV}alue.
+Boomlagoon.{JSON} have two main types that we have used. That is {JSONO}bject
+and {JSONV}alue. A typical {JSONO}bject holds other {JSONO}bjects and/or
+{JSONV}alues. A {JSONV}alue holds information about type and content.
 
-\todo{PK: Finish this..}
+By using Boomlagoon's implementation of {JSON} we were able to store the
+structure as a {JSONO}bject, which again can be stored and sent as a {S}tring.
+This solved our problem since {U}nity are able to serialize and deserialize 
+{S}trings. We think the solution is somewhat of a hack and we wish we had found
+a better way to solve the problem. Unfortunately the search for a better 
+solution was taking so much time that we just had to go ahead and use the best
+solution we had found.
+
+In order to use the library, we had to be sure that it was compiled before it
+was ever used. We got some problems due to this fact and after some research,
+we found that we could precompile it ourselves. Boomlagoon.{JSON} is a stand-
+alone C\# implementation. Because of this we were able to import it into a
+Microsoft Visual Studio Project and compile it as a DLL. None of us had done 
+this before so it was some useful learning in it.
+
+We tried the same thing with a Vuforia script that also had to be compiled 
+before it was used. This was not working since that script was not stand-alone.
+The solution there was to move the script to another folder.
