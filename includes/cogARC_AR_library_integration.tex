@@ -8,14 +8,15 @@
 Starting to use Vuforia with Unity is not a complex task as Vuforia comes with a extension for Unity.
 After installing Vuforia we as developers only have to drag in readily made \gls{prefab} for the camera and it is ready to be used.
 When this is done you can start adding targets for the camera to look for in the world.
-In our case we use frame markers so we add a frame marker prefab to our hierarchy.
-The only thing missing for getting having a augmented object is to drag in a object as a child of a frame marker in the hiearchy.
+You can add a variety of markers, image markers that will look for an image, frame markers that will look for a black square with identifiers or a geometrical target which is a simple geometrical form such a cylinder or a box.
+After deciding upon a marker you drag the associated prefab into the hierarchy.
+The only thing missing for getting having a augmented object is to drag in a object as a child of a frame marker in the hierarchy.
 After that is done you have a augmented object with a marker ready for use!
 
 \subsection{Frame-marker to cubes models}
 \label{subsec:framemarker_model} 
 Vuforia allows a small variety markers to give transforms(position, rotation and scale) to game-objects in unity. 
-There is image-markers that can recognize an image even if it only sees a small part of the image. 
+There are image-markers that can recognize an image even if it only sees a small part of the image. 
 However the recommended max limit for image-markers was only five so at least for the cubes these were out of the question. 
 There is also markers with shapes like cubes, cylinders, etc. but we had trouble getting these features to work, due to lack of documentation. 
 And then there is the standard frame-marker which has to be completely visible to work but allows you to have up to 512 markers at once.\\
