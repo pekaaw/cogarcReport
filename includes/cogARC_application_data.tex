@@ -1,6 +1,8 @@
-\todo{Which data are stored in the app and which data is sent to the
-		network? This should be a summary of what we have written under
-		development.}
+
 
 \subsection{Data kept locally}
+\todo{Which data are stored in the app? This should be a summary of what we have written under development.}
 \subsection{Data sent to server}
+We assumed that all the data sent to server is unimportant for the player. Data is sent, if possible, without notice and there is no notice if the transmission fails.
+When the score is registered locally, the application will also try to send the score to the server. It will not upload other entries of the high-score list, only the score that is currently being registered. The data sent here is the username, score and minigame ID . The time of the event is recorded by the server. \\
+When a level is completed all events stored that round will be uploaded to server. the data stored in events are username, score, minigame ID, current level, event type, the cubes data in order and the game-time of the event. As with the scores the server keeps the time of when it receives the data, but this is less useful here as the server receives the events in groups and in random order from most of the minigames. This is why we also send the in-game-time of the event, but we didn't receive any specifications about this so it will presumably need some formating. 
