@@ -10,6 +10,39 @@ We planned the development project and ended up with the gantt diagram shown in 
 
 Afterwards we see that the process has been like this:
 
+\begin{figure}[ht]
+	\capstart
+	\centering
+
+	\begin{ganttchart}{2}{20}
+		\gantttitle{Development period}{19} \\
+		\gantttitlelist{2,...,20}{1} \\
+		% \ganttgroup{Group 1}{1}{7} \\
+		\ganttbar{Planning}{2}{5} 
+		\ganttbar{}{10}{10} \\
+		\ganttbar{Learning Tools}{3}{7}
+		\ganttbar{}{9}{9} \ganttnewline
+
+		\ganttgroup{Development}{6}{19} \\
+
+		\ganttbar{Project Setup}{3}{3} \ganttnewline
+		\ganttbar{UI Design}{3}{5} \ganttnewline
+
+		% \ganttbar{Report writing}{14}{20} \\
+
+		\ganttgroup{Report writing}{14}{20} \\
+		\ganttmilestone{Deadline}{20} \ganttnewline
+
+		% \ganttlink{elem1}{elem2}
+		% \ganttlink{elem1}{elem3}
+		% \ganttlink{elem0}{elem1}
+		% \ganttlink{elem2}{elem3}
+		% \ganttlink{elem3}{elem4}
+	\end{ganttchart}
+
+	\caption{Project gantt chart}
+\end{figure}
+
 \todo{Insert gantt diagram of our dev-process here.}
 
 \subsection{Planning vs reality}%Or how we worked compared to the plan
