@@ -36,6 +36,7 @@ This has been the case with member variables of the script and variables in the 
 \subsection {Not JavaScript library compatible}
 UnityScript being so different from JavaScript makes other pre-made JavaScript library non-compatible with UnityScript, which also makes it really difficult to find reference help. 
 One half of the built in library in Unitys Monodevelop is Unitys own library and the other half is made using the .NET framework from MicroSoft.
-This was a small problem when we looked into using JSON objects in our program and wanted to use a library.
-We were lucky enough to find a library usable in Unity, Boomlagoon\cite{Boomlagoon.JSON}.
-\todo{Finish this section a bit more gracefully.}
+This was a small problem when we looked into using {JSON} objects in our program and wanted to use a library.
+Since {JSON} is a part of the JavaScript language and spesification we tought that it was also implemented in UnityScript.
+This was not the case, but we are not the first to notice this and there are now several {JSON}-parser libraries availible created for Unity in both C\# and in UnityScript.
+One such library is Boomlagoon\cite{Boomlagoon.JSON} that we ended up using for our project.
