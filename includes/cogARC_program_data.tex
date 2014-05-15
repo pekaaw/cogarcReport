@@ -1,3 +1,11 @@
-\todo{Write about the process we had for adding data. How Jakob 
-implemented it at a late point when we were told that this was a 
-"must do".}
+\subsection{Implementing logging}
+This was something we didn't know we had to do. Due to some miscommunication with our employer we had half forgotten, half thought we weren't suppose to implement it. The day we heard about it was the day we had decided to end the development process. It was a bit of a rushed job, we just tried to get it working as quickly as possible so that we could keep working on the report. For most of the games it was easy to implement, but for the word-game (\ref{game:wo0ord_game}) our employer and supervisor wanted some extra data that was not possible to get the way the code was written. They wanted to log events when a player after completing a registered word forms another registered word  then tries to form first word again. Problem was that for all the games to use the same program flow and scripts we made a system were completed goals no longer exists in memory. 
+\begin{enumerate}
+	\item LevelCreator fills up a goal-state-array that may consist of several words or tasks.
+	\item When a goal is completed, a correct word is formed, a pair is matched or the correct 3x3 grid has been made, this part of the goal-state-array is removed.
+	\item When the goal-state-array is empty (or the time is up when there is a time limit) the array is cleared and next level is loaded.
+\end{enumerate}
+Problem was we had no way of testing if the newly formed word is one that has been done before. We solved this by putting the completed words into another list and duplicate most of the test-function to test against this new list after testing for correct words.\\ It went surprisingly fast to implement, most of the work was already done by the next day. However they did not formulate exactly what data they wanted we waited for response, but we didn't get any, so we just tried to make it as easy as possible to get all the data they had mentioned so that we could work on the report full-time. It is unfinished despite working well.
+
+\subsection{Using player preferences to store data}
+\todo{write about prefx.}
