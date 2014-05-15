@@ -2,7 +2,7 @@
 PlayerPrefsX (also known as ArrayPrefs 2)\cite{PlayerPrefsX} is a library created by the Unity community to enhance the built in Player Preference class of Unity.
 
 PlayerPrefsX expands Unitys' way of storing player preferences or other data that the programmer want to persist between sessions.
-Unity without PlayerPrefsX supports saving and getting float values, int values and strings. Altough this is all that is needed in most cases, it is sometimes practical to be able to store a bit more complex data.
+Unity without PlayerPrefsX supports saving and getting float values, int values and strings. Although this is all that is needed in most cases, it is sometimes practical to be able to store a bit more complex data.
 
 PlayerPrefsX is able to store vectors, quaternions, arrays and more. 
 We used this library to store the list of high scores for each game. 
@@ -26,11 +26,12 @@ we needed to be able to save and restore a structure in another way than the
 default one. We spent weeks trying to solve this problem. When we stopped
 looking for better ways to solve it, we had ended up on converting the 
 structure to {JSON} and save the whole thing as a string.
-Unity has some support for {JSON} with it's library called Simple{JSON} 
-\cite{SimpleJSON}. Simple{JSON} have the drawback that it only stores data
-as a string, which will make the restoration difficult. Instead we found
-another implementation of JSON that manage to handle different types:
-Boomlagoon.{JSON} \cite{Boomlagoon.JSON}.
+Unity does not have any built in support for {JSON} but there are community made libraries both free to use or to buy from the asset store.
+After looking for alternatives we found two that looked promising.
+Simple{JSON} \cite{SimpleJSON} and Boomlagoon.{JSON} \cite{Boomlagoon.JSON}.
+Simple{JSON} have the drawback that it only stores data as a string, 
+which will make the restoration difficult. 
+Boomlagoon.{JSON} \cite{Boomlagoon.JSON} however supports more complex data.
 
 Boomlagoon.{JSON} have two main types that we have used. That is {JSONO}bject
 and {JSONV}alue. A typical {JSONO}bject holds other {JSONO}bjects and/or
