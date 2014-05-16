@@ -1,5 +1,5 @@
 \subsection{Implementing logging}
-This was something we didn't know we had to do. Due to some miscommunication with our employer we had half forgotten, half thought we weren't suppose to implement it. The day we heard about it was the day we had decided to end the development process. It was a bit of a rushed job, we just tried to get it working as quickly as possible so that we could keep working on the report. For most of the games it was easy to implement, but for the word-game (\ref{game:wo0ord_game}) our employer and supervisor wanted some extra data that was not possible to get the way the code was written. They wanted to log events when a player after completing a registered word forms another registered word  then tries to form first word again. Problem was that for all the games to use the same program flow and scripts we made a system were completed goals no longer exists in memory. 
+This was something we didn't know we had to do. Due to some miscommunication with our employer we had half forgotten, half thought we weren't supposed to implement it. The day we heard about it was the day we had decided to end the development process. It was a bit of a rushed job, we just tried to get it working as quickly as possible so that we could keep working on the report. For most of the games it was easy to implement, but for the word-game (\ref{game:wo0ord_game}) our employer and supervisor wanted some extra data that was not possible to get the way the code was written. They wanted to log events when a player after completing a registered word forms another registered word  then tries to form first word again. Problem was that for all the games to use the same program flow and scripts we made a system were completed goals no longer exists in memory. 
 \begin{enumerate}
 	\item LevelCreator fills up a goal-state-array that may consist of several words or tasks.
 	\item When a goal is completed, a correct word is formed, a pair is matched or the correct 3x3 grid has been made, this part of the goal-state-array is removed.
@@ -8,4 +8,15 @@ This was something we didn't know we had to do. Due to some miscommunication wit
 Problem was we had no way of testing if the newly formed word is one that has been done before. We solved this by putting the completed words into another list and duplicate most of the test-function to test against this new list after testing for correct words.\\ It went surprisingly fast to implement, most of the work was already done by the next day. However they did not formulate exactly what data they wanted we waited for response, but we didn't get any, so we just tried to make it as easy as possible to get all the data they had mentioned so that we could work on the report full-time. It is unfinished despite working well.
 
 \subsection{Using player preferences to store data}
-\todo{write about prefx.}
+To store data that we need later such as username or scores from minigames we use Unitys built in methods for storing data.
+Using the built in methods lets us have Unity take care of storing the values correctly on any platform cogArc would be installed on without having to worry about 
+storing and retrieving the values correctly ourself.
+Unity supports storing of simple data such as strings or integer values paired with a key.
+To store more complex data such as the scores from each minigame we use a third party library called PlayerPrefsX\cite{PlayerPrefsX}.
+Using PlayerPrefsX we can store the scores as arrays that are much easier to retrieve than having one value paired with one key for each score.
+Not using PlayerPrefsX would force us to store ten different key-value pairs for each list of scores we wanted to save.
+Storing and retrieving the scores for a game is done with a compound key made from username + the name of the game.
+For example if the username is set as "John" and the game is "Total Sum" the key used to retrieve and store values would be "JohnTotalSum".
+
+Splitting the highscores on both names and games allows us to easily create highscore lists without having to worry about it interfering with
+a highscore of another game or if a device is shared it is easy for the user to have individual scores by changing their username.
