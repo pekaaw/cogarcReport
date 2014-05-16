@@ -1,7 +1,10 @@
-
-
 \subsection{Data kept locally}
-\todo{Which data are stored in the app? This should be a summary of what we have written under development.}
+Stored localy on the device is two types of data.
+The username that the player have saved and highscores.
+Highscores are arrays of the top ten scores paired up with the username.
+So if the user changes the username they will have either reach new highscores
+or change back to their previous username.
+
 \subsection{Data sent to server}
 We assumed that all the data sent to server is unimportant for the player. Data is sent, if possible, without notice and there is no notice if the transmission fails.
 When the score is registered locally, the application will also try to send the score to the server. It will not upload other entries of the high-score list, only the score that is currently being registered. The data sent here is the username, score and minigame ID . The time of the event is recorded by the server. \\
