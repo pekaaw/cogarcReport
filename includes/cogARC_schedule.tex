@@ -1,36 +1,108 @@
-We planned the development project and ended up with the gantt diagram shown in Figure \ref{fig:preplan_gantt}: \nameref{fig:preplan_gantt}.
+We planned the development project and ended up with the gantt diagram shown in \autoref{fig:preplan_gantt}: \nameref{fig:preplan_gantt}.
 
 \begin{figure}[ht]
 	\capstart
 	\centering
 	\includegraphics[height=\textwidth, angle=270]{preplan_gantt_diagram}
-	\caption[Preplan Gantt diagram]{Our initial gantt diagram for the project.}	\label{fig:preplan_gantt}
+	\caption[Preplan Gantt diagram]{Our initial gantt diagram for the project.}
+	\label{fig:preplan_gantt}
 \end{figure}
 
 
-Afterwards we see that the process has been like this:
+Afterwards we see that the process has been like we have depicted in \autoref{fig:final_gantt}: \nameref{fig:final_gantt}.
 
-\begin{figure}[ht]
+\begin{figure}[p]
 	\capstart
 	\centering
 
-	\begin{ganttchart}{2}{20}
+	\begin{ganttchart}[
+		hgrid,
+		vgrid,
+		y unit chart=1.5em,
+		bar/.append style={fill=green!60!blue, rounded corners=1pt},
+		milestone height=0.7
+	  ]{2}{20}
 		\gantttitle{Development period}{19} \\
 		\gantttitlelist{2,...,20}{1} \\
 		% \ganttgroup{Group 1}{1}{7} \\
-		\ganttbar{Planning}{2}{5} 
+		\ganttbar{Planning}{2}{6} 
+		\ganttbar{}{8}{8} \\
+
+		\ganttbar{Learning Tools}{3}{5} \\
+
+		\ganttbar{Webpage}{5}{6}
+		\ganttbar{}{8}{8}
+		\ganttbar{}{12}{12}
+		\ganttbar{}{14}{14}
+		\ganttbar{}{18}{19} \\
+
+		\ganttbar{Final Report}{5}{6}
+		\ganttbar{}{12}{12}
+		\ganttbar{}{14}{20} \\
+
+		\ganttmilestone{Preplan Delivery}{5} \\
+
+		\ganttgroup{Implementation}{4}{19} \\
+
+		\ganttbar{Prototyping}{4}{6}
 		\ganttbar{}{10}{10} \\
-		\ganttbar{Learning Tools}{3}{7}
-		\ganttbar{}{9}{9} \ganttnewline
 
-		\ganttgroup{Development}{6}{19} \\
+		\ganttbar{Gyro}{5}{5} \\
 
-		\ganttbar{Project Setup}{3}{3} \ganttnewline
-		\ganttbar{UI Design}{3}{5} \ganttnewline
+		\ganttbar{Collision Detection}{6}{7} \\
+
+		\ganttbar{Rules}{8}{9}
+		\ganttbar{}{11}{11}
+		\ganttbar{}{13}{13} \\
+
+		\ganttbar{Grid Feature}{10}{11} \\
+
+		\ganttbar{Pair Feature}{10}{10} \\
+
+		\ganttbar{Chain Feature}{6}{7}
+		\ganttbar{}{12}{13} \\
+
+		\ganttbar{Score Screen}{5}{5} \\
+
+		\ganttbar{Register User Screen}{7}{8}\\
+
+		\ganttbar{Loading Screen}{9}{9}
+		\ganttbar{}{11}{11}
+		\ganttbar{}{13}{13} \\
+
+		\ganttbar{GUI}{6}{7}
+		\ganttbar{}{9}{11}
+		\ganttbar{}{14}{18} \\
+
+		\ganttbar{Menus}{6}{6}
+		\ganttbar{}{14}{14}
+		\ganttbar{}{17}{18} \\
+
+		\ganttbar{Level Creator}{8}{13}
+		\ganttbar{}{15}{15} \\
+
+		\ganttbar{New Game Script}{12}{12}\\
+
+		\ganttbar{File Loading}{13}{14}\\
+
+		\ganttbar{Logging}{18}{19}\\
+
+		\ganttbar{Testing and Fixing}{14}{14}
+		\ganttbar{}{16}{19}\\
+
+		\ganttbar{Code Review}{8}{19}\\
+
+
+		\ganttbar{GUI}{6}{7}
+		\ganttbar{}{9}{11}
+		\ganttbar{}{14}{18}\\
+
+		% \ganttbar{Project Setup}{3}{3} \ganttnewline
+		% \ganttbar{UI Design}{3}{5} \ganttnewline
 
 		% \ganttbar{Report writing}{14}{20} \\
 
-		\ganttgroup{Report writing}{14}{20} \\
+		% \ganttgroup{Report writing}{14}{20} \\
 		\ganttmilestone{Deadline}{20} \ganttnewline
 
 		% \ganttlink{elem1}{elem2}
@@ -40,10 +112,11 @@ Afterwards we see that the process has been like this:
 		% \ganttlink{elem3}{elem4}
 	\end{ganttchart}
 
-	\caption{Project gantt chart}
+	\caption[Development Process Gantt Chart]{How the project gantt chart looks like at the end of the development process.}
+	\label{fig:final_gantt}
+
 \end{figure}
 
-\todo{Insert gantt diagram of our dev-process here.}
 
 \subsection{Planning vs reality}%Or how we worked compared to the plan
 Our development cycle deviated a lot from the original plan due to a multitude of factors.
