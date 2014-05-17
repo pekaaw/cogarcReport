@@ -39,6 +39,7 @@ Woords is a game where the player is presented with a jumble of words and a them
 
 \subsubsection{Dropping leader-board}
 In the original design document we got there was mention of having the loading screen both instructions for the game and a global leader-board. Unity does not work well with net based activities 
+so this feature was dropped.
 
 \subsubsection{Putting textures in a special folder}
 This decision is due to a limitation in Unity. When you place a object in the object field in the inspector it will give us a new instance of that object, in this case a texture. What it does not give us is where it is stored. This would not be a problem if Unity was able to serialize our data, but since we are storing our objects as a JSON object due to Unity not being able to serialize it we have to store it ourself and the name of the texture is the only data we can rely on. The name however does not include the path of where the object is stored, so when we are extracting the data back from JSON objects into textures we only have the name of the texture. So to avoid any confusion of duplicate names and avoiding searching for the texture we constrict the location of where it can be placed into a sub-folder in the Resources folder of Unity.
