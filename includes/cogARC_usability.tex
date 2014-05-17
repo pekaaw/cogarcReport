@@ -14,6 +14,17 @@ In the Total Sum game (\ref{game:total_sum}) it can be quite frustrating to add 
 AR implantation is explained in more depth in \ref{subsec:framemarker_model}.
 When we were implementing Vuforia we focused on usability rather than aesthetics. The twitching, incorrect rotation and disappearing of the cubes when using the standard way give the player more nuanced feedback about the conditions for the tracking and understanding for how it works. Even though we were having tracking problems it was better to not make changes. There were other ways that could make the cubes easier to get into and keep in view, which would make some games easier to do if playing in bad conditions. but also in another way make the game harder because cubes would get stuck on screen or be in wrong positions confusing the player.
 
-
-
-\todo{What have we thought through about usability? What can we make up here?}
+\subsection{Light condition}
+When playing a game the light conditions of the area being played in plays a big role in how easy it is for Vuforia to detect a marker.
+If it is too dark there won't be enough light for Vuforia to discern the markers. 
+Vuforia will still be able to find the markers but it might not find it as easy as expected.
+We suspect this to be because of the contrast to the frame marker and the surroundings. 
+If Vuforia can't detect the frame around the marker it won't register as a marker.
+This is also noticeable when the lights are too bright.
+When playing in a very bright room the paper the markers are printed on will start having specular highlights.
+And with the specular highlights being almost white it is then the opposite of what Vuforia is searching for in a image.
+We have found that unfortunately that the black portion of our boxes reflects the most light.
+We have found that playing in a normally lit room or office are very ideal as the chance of it having 
+very bright light sources or light sources being very close to the marker to be unlikely.
+Offices or other work-rooms also tend to be well lit to avoid eyestrain.
+\todo{Have someone competent read this.}
