@@ -298,6 +298,14 @@ Example of references inside the document:
 \includepdfset{pages=-,pagecommand=\thispagestyle{plain}}
 \label{appx:time_management}
 \addcontentsline{toc}{chapter}
+	{Time management\\ \textit{Summary report from Toggl}}
+\includepdf{includes/summary-report_toggl.pdf}
+
+\clearpage
+\phantomsection
+\includepdfset{pages=-,pagecommand=\thispagestyle{plain}}
+\label{appx:time_management}
+\addcontentsline{toc}{chapter}
 	{Time management\\ \textit{Detailed report from Toggl}}
 \includepdf{includes/detailed-report_toggl.pdf}
 
