@@ -290,19 +290,37 @@
 % Let included pdf's get page numbering
 \includepdfset{pagecommand=\thispagestyle{plain}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PROJECT DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Project description
 \clearpage
 \addtocounter{chapter}{1}
 \addcontentsline{toc}{chapter}{\Alph{chapter} Project description}
 \includepdf{includes/AR_project}
 
-% Employers Design Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EMPLOYERS DESIGN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \addtocounter{chapter}{1}
 \addcontentsline{toc}{chapter}{\Alph{chapter} Employer's design document}
 \includepdf[pages=-]{includes/DESIGN_DOCUMENT_v2.pdf}
 
-% Time management
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PROJECT PREPLAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\Alph{chapter} Project pre-plan}
+\includepdf[pages=-]{includes/Project_plan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PROJECT PREPLAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\Alph{chapter} Project agreement}
+\includepdf[pages=-]{includes/Project_agreement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TIME MANAGEMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \phantomsection
 \label{appx:time_management}
