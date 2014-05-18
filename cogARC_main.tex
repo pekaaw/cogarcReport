@@ -285,6 +285,12 @@
 % Let included pdf's get page numbering
 \includepdfset{pagecommand=\thispagestyle{plain}}
 
+% Project description
+\clearpage
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\Alph{chapter} Project description}
+\includepdf{includes/AR_project}
+
 % Employers Design Document
 \clearpage
 \addtocounter{chapter}{1}
