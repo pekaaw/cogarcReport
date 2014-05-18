@@ -265,35 +265,45 @@
 		\label{sec:conclution}
 		\input{includes/cogARC_conclution}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% APPENDICES STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{Appendices}
- 
-\appendix %after this line all chapters will have leters instead of numbers
-%\appendixpage
-%\addappheadtotoc
+% Glossary list
+\printnoidxglossary[sort=word]
 
 % References
 \bibliographystyle{classes/gucthesis}
 \bibliography{includes/cogARC_bibliography}
 
-% Glossary list
-\printnoidxglossary[sort=word]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APPENDICES STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\appendix %after this line all chapters will have letters instead of numbers
+\addappheadtotoc
+\appendixpage
+
+% Let included pdf's get page numbering
+\includepdfset{pagecommand=\thispagestyle{plain}}
+
+% Employers Design Document
+\clearpage
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\Alph{chapter} Employer's design document}
+\includepdf[pages=-]{includes/DESIGN_DOCUMENT_v2.pdf}
 
 % Time management
 \clearpage
 \phantomsection
-\includepdfset{pagecommand=\thispagestyle{plain}}
 \label{appx:time_management}
 
-\addcontentsline{toc}{chapter}{Time management}
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\Alph{chapter} Time management}
 
+\addtocounter{section}{1}
 \addcontentsline{toc}{section}{Summary report}
 \includepdf[pages=1]{includes/summary-report_toggl}
 
+\addtocounter{section}{1}
 \addcontentsline{toc}{section}{Detailed report}
 \includepdf[pages=-]{includes/detailed-report_toggl}
 
