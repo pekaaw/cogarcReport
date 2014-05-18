@@ -840,7 +840,7 @@ Use $\backslash$useyear\{<year>\} to set year.
 	Kontaktperson: & \multicolumn{4}{@{  }p{0.6\textwidth}}{\gmt@contact}\\
 		& \multicolumn{4}{@{  }l}{}\\
 	N\o{}kkeLord: & {\gmt@keywordsNOR}\\
-	Antall sider: & \pageref{LastPage} \\ 
+	Antall sider: & \pageref{STOP_SUMMARY_PAGECOUNT} \\ 
 	Antall vedlegg: &  \gmt@appnumber \\
 	Tilgjengelighet: & \AA{}pen \\ % this needs updating \gmt@pubNOR}\\
 	
@@ -876,7 +876,7 @@ Use $\backslash$useyear\{<year>\} to set year.
 	Contact person: & \multicolumn{4}{@{  }p{0.6\textwidth}}{\gmt@contact}\\
 		& \multicolumn{4}{@{  }l}{}\\
 	Keywords: & \multicolumn{4}{@{  }l}{\gmt@keywords}\\
-	Pages: & \pageref{LastPage} \\
+	Pages: & \pageref{STOP_SUMMARY_PAGECOUNT} \\
 	Appendixes: & \gmt@appnumber \\
 	Availability: & Open \\ % this needs updating to \gmt@pub}\\
 		& \multicolumn{4}{@{  }l}{}\\

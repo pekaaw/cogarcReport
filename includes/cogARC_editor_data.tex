@@ -1,3 +1,9 @@
+\begin{wrapfigure}{l}{0.47\textwidth}
+	\capstart
+	\includegraphics[width=0.45\textwidth]{images/inspector.png}
+	\caption{Default Unity inspector}
+\end{wrapfigure}
+
 To edit what the games does and how they look like we wanted meant that a lot of variables from our scripts had to be exposed.
 By default Unity will expose all public variables in a script.
 This includes scripts that the script want publicly available for other scripts to get or variables that should not be accessible for the
@@ -17,18 +23,6 @@ Doing it this way meant that we would have complete control over what is display
 Having complete control also means that we had to explicitly tell Unity what variables should go where, what name to show
 for the field in the inspector, what values was acceptable and so on. 
 
-\begin{wrapfigure}{l}{0.47\textwidth}
-	\capstart
-	\includegraphics[width=0.45\textwidth]{images/inspector.png}
-	\caption{Default Unity inspector}
-\end{wrapfigure}
-
-\begin{wrapfigure}{r}{0.47\textwidth}
-	\capstart
-	\includegraphics[width=0.45\textwidth]{images/inspector edited.png}
-	\caption{cogArc custom inspector}
-\end{wrapfigure}
-
 Seen above are the data with the default inspector in Unity, what is not seen is the data about how cubes should look as this data 
 is not in a format that Unity can show.
 The other picture shows the inspector we built. 
@@ -36,3 +30,12 @@ Our inspector hides variables that is either not needed with the current setting
 This makes it easy to manipulate already made scenes / minigames in Unity or to swiftly create a new variant of a minigame.
 And testing new configurations is quick and easy as all values and inputs are constricted to be only acceptable values.
 This alleviates the user from a lot of respocibility and having to know about what goes on when data is changed as all of this is automated.
+
+\begin{wrapfigure}{r}{0.47\textwidth}
+	\capstart
+	\vspace{-30pt}
+	\includegraphics[width=0.45\textwidth]{images/inspector_edited.png}
+	\caption{cogArc custom inspector}
+	\label{fig:inspector_edited}
+	\vspace{-15pt}
+\end{wrapfigure}

@@ -220,10 +220,12 @@
 		\label{sec:program_data}
 		\input{includes/cogARC_program_data}
 
+	\newpage
 	\section{Editor data}
 		\label{sec:editor_data}
 		\input{includes/cogARC_editor_data}
 
+	\newpage
 	\section{Vuforia integration}
 		\label{sec:AR_library_integration}
 		\input{includes/cogARC_AR_library_integration}
@@ -280,6 +282,9 @@
 % Hack to get appendices on a new page in table of content
 \addtocontents{toc}{~}
 
+% Hack to stop summary page count here
+\label{STOP_SUMMARY_PAGECOUNT}
+
 \clearpage
 \appendix %after this line all chapters will have letters instead of numbers
 \addappheadtotoc
@@ -288,19 +293,37 @@
 % Let included pdf's get page numbering
 \includepdfset{pagecommand=\thispagestyle{plain}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PROJECT DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Project description
 \clearpage
 \addtocounter{chapter}{1}
 \addcontentsline{toc}{chapter}{\Alph{chapter} Project description}
 \includepdf{includes/AR_project}
 
-% Employers Design Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% EMPLOYERS DESIGN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \addtocounter{chapter}{1}
 \addcontentsline{toc}{chapter}{\Alph{chapter} Employer's design document}
 \includepdf[pages=-]{includes/DESIGN_DOCUMENT_v2.pdf}
 
-% Time management
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PROJECT PREPLAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\Alph{chapter} Project pre-plan}
+\includepdf[pages=-]{includes/Project_plan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PROJECT PREPLAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\Alph{chapter} Project agreement}
+\includepdf[pages=-]{includes/Project_agreement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TIME MANAGEMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \phantomsection
 \label{appx:time_management}

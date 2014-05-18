@@ -13,7 +13,7 @@
    height="649.85199"
    id="svg2"
    inkscape:version="0.48.2 r9819"
-   sodipodi:docname="D:\Dokumenter\Skule\05 Gjøvik\Bachelorprosjekt\Report\frå daniel\user_flow_chart (4).svg">
+   sodipodi:docname="user_flow_chart.svg">
   <metadata
      id="metadata280">
     <rdf:RDF>
@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -35,41 +35,46 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="804"
-     inkscape:window-height="900"
+     inkscape:window-width="1920"
+     inkscape:window-height="1005"
      id="namedview278"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.25267176"
-     inkscape:cx="-214.19519"
-     inkscape:cy="123.64281"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:zoom="1.1802688"
+     inkscape:cx="107.22147"
+     inkscape:cy="324.92599"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <defs
      id="defs4" />
   <g
      id="g12"
-     transform="translate(224,150)">
+     transform="translate(224,150)"
+     style="fill:#ffff00">
     <g
-       id="g14">
+       id="g14"
+       style="fill:#ffff00">
       <g
-         id="g16">
+         id="g16"
+         style="fill:#ffff00">
         <g
-           id="g18">
+           id="g18"
+           style="fill:#ffff00">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#ffff00;stroke:none"
              inkscape:connector-curvature="0"
              id="path20"
              d="m 100,50 a 50,50 0 1 0 -2.5e-5,0.05 z" />
           <g
-             id="g22">
+             id="g22"
+             style="fill:#ffff00">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#ffff00;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
                inkscape:connector-curvature="0"
                id="path24"
                stroke-miterlimit="10"
@@ -94,22 +99,27 @@
   </g>
   <g
      id="g30"
-     transform="translate(224,1)">
+     transform="translate(224,1)"
+     style="fill:#e3866d;fill-opacity:1">
     <g
-       id="g32">
+       id="g32"
+       style="fill:#e3866d;fill-opacity:1">
       <g
-         id="g34">
+         id="g34"
+         style="fill:#e3866d;fill-opacity:1">
         <g
-           id="g36">
+           id="g36"
+           style="fill:#e3866d;fill-opacity:1">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#e3866d;stroke:none;fill-opacity:1"
              inkscape:connector-curvature="0"
              id="path38"
              d="m 100,50 a 50,50 0 1 0 -2.5e-5,0.05 z" />
           <g
-             id="g40">
+             id="g40"
+             style="fill:#e3866d;fill-opacity:1">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#e3866d;stroke:#333333;stroke-width:2;stroke-miterlimit:10;fill-opacity:1"
                inkscape:connector-curvature="0"
                id="path42"
                stroke-miterlimit="10"
@@ -134,22 +144,27 @@
   </g>
   <g
      id="g48"
-     transform="translate(1,150)">
+     transform="translate(1,150)"
+     style="fill:#2aff80;fill-opacity:1">
     <g
-       id="g50">
+       id="g50"
+       style="fill:#2aff80;fill-opacity:1">
       <g
-         id="g52">
+         id="g52"
+         style="fill:#2aff80;fill-opacity:1">
         <g
-           id="g54">
+           id="g54"
+           style="fill:#2aff80;fill-opacity:1">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#2aff80;stroke:none;fill-opacity:1"
              inkscape:connector-curvature="0"
              id="path56"
              d="m 0,0 100,0 q 0,0 0,0 l 0,100 q 0,0 0,0 L 0,100 q 0,0 0,0 L 0,0 q 0,0 0,0 z" />
           <g
-             id="g58">
+             id="g58"
+             style="fill:#2aff80;fill-opacity:1">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#2aff80;stroke:#333333;stroke-width:2;stroke-miterlimit:10;fill-opacity:1"
                inkscape:connector-curvature="0"
                id="path60"
                stroke-miterlimit="10"
@@ -157,16 +172,18 @@
           </g>
         </g>
         <g
-           id="g62">
+           id="g62"
+           style="fill:#2aff80;fill-opacity:1">
           <g
-             id="g64">
+             id="g64"
+             style="fill:#2aff80;fill-opacity:1">
             <path
-               style="opacity:0;fill:#000000;fill-opacity:0;stroke:none"
+               style="opacity:0;fill:#2aff80;fill-opacity:1;stroke:none"
                inkscape:connector-curvature="0"
                id="path66"
                d="M 2,2 2,97 97,97 97,3 3,3 z" />
             <path
-               style="opacity:0;fill:none;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10"
+               style="opacity:0;fill:#2aff80;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10;fill-opacity:1"
                inkscape:connector-curvature="0"
                id="path68"
                stroke-miterlimit="10"
@@ -191,24 +208,29 @@
   </g>
   <g
      id="g74"
-     transform="translate(371,75)">
+     transform="translate(371,75)"
+     style="fill:#2aff80">
     <g
-       id="g76">
+       id="g76"
+       style="fill:#2aff80">
       <g
          id="g78"
-         transform="scale(1,0.75)">
+         transform="scale(1,0.75)"
+         style="fill:#2aff80">
         <g
-           id="g80">
+           id="g80"
+           style="fill:#2aff80">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#2aff80;stroke:none"
              inkscape:connector-curvature="0"
              id="path82"
              d="m 0,0 100,0 q 0,0 0,0 l 0,100 q 0,0 0,0 L 0,100 q 0,0 0,0 L 0,0 q 0,0 0,0 z" />
           <g
              id="g84"
-             transform="scale(1,1.3333333)">
+             transform="scale(1,1.3333333)"
+             style="fill:#2aff80">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#2aff80;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
                inkscape:connector-curvature="0"
                id="path86"
                stroke-miterlimit="10"
@@ -216,17 +238,19 @@
           </g>
         </g>
         <g
-           id="g88">
+           id="g88"
+           style="fill:#2aff80">
           <g
              id="g90"
-             transform="scale(1,1.3333333)">
+             transform="scale(1,1.3333333)"
+             style="fill:#2aff80">
             <path
-               style="opacity:0;fill:#000000;fill-opacity:0;stroke:none"
+               style="opacity:0;fill:#2aff80;fill-opacity:0;stroke:none"
                inkscape:connector-curvature="0"
                id="path92"
                d="m 2,1.5 0,71.25 95,0 0,-70.5 -94,0 z" />
             <path
-               style="opacity:0;fill:none;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10"
+               style="opacity:0;fill:#2aff80;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10"
                inkscape:connector-curvature="0"
                id="path94"
                stroke-miterlimit="10"
@@ -260,22 +284,27 @@
   </g>
   <g
      id="g102"
-     transform="translate(101,380)">
+     transform="translate(101,380)"
+     style="fill:#2aff80;fill-opacity:1">
     <g
-       id="g104">
+       id="g104"
+       style="fill:#2aff80;fill-opacity:1">
       <g
-         id="g106">
+         id="g106"
+         style="fill:#2aff80;fill-opacity:1">
         <g
-           id="g108">
+           id="g108"
+           style="fill:#2aff80;fill-opacity:1">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#2aff80;stroke:none;fill-opacity:1"
              inkscape:connector-curvature="0"
              id="path110"
              d="m 0,0 100,0 q 0,0 0,0 l 0,100 q 0,0 0,0 L 0,100 q 0,0 0,0 L 0,0 q 0,0 0,0 z" />
           <g
-             id="g112">
+             id="g112"
+             style="fill:#2aff80;fill-opacity:1">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#2aff80;stroke:#333333;stroke-width:2;stroke-miterlimit:10;fill-opacity:1"
                inkscape:connector-curvature="0"
                id="path114"
                stroke-miterlimit="10"
@@ -283,16 +312,18 @@
           </g>
         </g>
         <g
-           id="g116">
+           id="g116"
+           style="fill:#2aff80;fill-opacity:1">
           <g
-             id="g118">
+             id="g118"
+             style="fill:#2aff80;fill-opacity:1">
             <path
-               style="opacity:0;fill:#000000;fill-opacity:0;stroke:none"
+               style="opacity:0;fill:#2aff80;fill-opacity:1;stroke:none"
                inkscape:connector-curvature="0"
                id="path120"
                d="M 2,2 2,97 97,97 97,3 3,3 z" />
             <path
-               style="opacity:0;fill:none;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10"
+               style="opacity:0;fill:#2aff80;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10;fill-opacity:1"
                inkscape:connector-curvature="0"
                id="path122"
                stroke-miterlimit="10"
@@ -399,22 +430,27 @@
   </g>
   <g
      id="g158"
-     transform="translate(274,460)">
+     transform="translate(274,460)"
+     style="fill:#2aff80;fill-opacity:1">
     <g
-       id="g160">
+       id="g160"
+       style="fill:#2aff80;fill-opacity:1">
       <g
-         id="g162">
+         id="g162"
+         style="fill:#2aff80;fill-opacity:1">
         <g
-           id="g164">
+           id="g164"
+           style="fill:#2aff80;fill-opacity:1">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#2aff80;stroke:none;fill-opacity:1"
              inkscape:connector-curvature="0"
              id="path166"
              d="m 0,0 100,0 q 0,0 0,0 l 0,100 q 0,0 0,0 L 0,100 q 0,0 0,0 L 0,0 q 0,0 0,0 z" />
           <g
-             id="g168">
+             id="g168"
+             style="fill:#2aff80;fill-opacity:1">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#2aff80;stroke:#333333;stroke-width:2;stroke-miterlimit:10;fill-opacity:1"
                inkscape:connector-curvature="0"
                id="path170"
                stroke-miterlimit="10"
@@ -422,16 +458,18 @@
           </g>
         </g>
         <g
-           id="g172">
+           id="g172"
+           style="fill:#2aff80;fill-opacity:1">
           <g
-             id="g174">
+             id="g174"
+             style="fill:#2aff80;fill-opacity:1">
             <path
-               style="opacity:0;fill:#000000;fill-opacity:0;stroke:none"
+               style="opacity:0;fill:#2aff80;fill-opacity:1;stroke:none"
                inkscape:connector-curvature="0"
                id="path176"
                d="M 2,2 2,97 97,97 97,3 3,3 z" />
             <path
-               style="opacity:0;fill:none;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10"
+               style="opacity:0;fill:#2aff80;stroke:#3c7626;stroke-width:2;stroke-miterlimit:10;fill-opacity:1"
                inkscape:connector-curvature="0"
                id="path178"
                stroke-miterlimit="10"
@@ -531,22 +569,27 @@
   </g>
   <g
      id="g210"
-     transform="translate(341,280)">
+     transform="translate(341,280)"
+     style="fill:#ffff00">
     <g
-       id="g212">
+       id="g212"
+       style="fill:#ffff00">
       <g
-         id="g214">
+         id="g214"
+         style="fill:#ffff00">
         <g
-           id="g216">
+           id="g216"
+           style="fill:#ffff00">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#ffff00;stroke:none"
              inkscape:connector-curvature="0"
              id="path218"
              d="m 100,50 a 50,50 0 1 0 -2.5e-5,0.05 z" />
           <g
-             id="g220">
+             id="g220"
+             style="fill:#ffff00">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#ffff00;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
                inkscape:connector-curvature="0"
                id="path222"
                stroke-miterlimit="10"
@@ -614,22 +657,27 @@
   </g>
   <g
      id="g244"
-     transform="translate(421,460)">
+     transform="translate(421,460)"
+     style="fill:#ffff00">
     <g
-       id="g246">
+       id="g246"
+       style="fill:#ffff00">
       <g
-         id="g248">
+         id="g248"
+         style="fill:#ffff00">
         <g
-           id="g250">
+           id="g250"
+           style="fill:#ffff00">
           <path
-             style="fill:#ffffff;stroke:none"
+             style="fill:#ffff00;stroke:none"
              inkscape:connector-curvature="0"
              id="path252"
              d="m 100,50 a 50,50 0 1 0 -2.5e-5,0.05 z" />
           <g
-             id="g254">
+             id="g254"
+             style="fill:#ffff00">
             <path
-               style="fill:none;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
+               style="fill:#ffff00;stroke:#333333;stroke-width:2;stroke-miterlimit:10"
                inkscape:connector-curvature="0"
                id="path256"
                stroke-miterlimit="10"
