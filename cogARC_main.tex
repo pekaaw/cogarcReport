@@ -49,6 +49,9 @@
 \input{includes/cogARC_glossaries}
 \makenoidxglossaries
 
+% For including pdfs
+\usepackage{pdfpages}
+
 % For gantt chart
 \usepackage{pgfgantt}
 
@@ -289,11 +292,14 @@ Example of references inside the document:
 % Glossary list
 \printnoidxglossary[sort=word]
 
-\chapter{Time management}
-	\label{appx:time_management}
-	\input{includes/cogARC_time_management}
-
-
+% Time management
+\clearpage
+\phantomsection
+\includepdfset{pages=-,pagecommand=\thispagestyle{plain}}
+\label{appx:time_management}
+\addcontentsline{toc}{chapter}
+	{Time management\\ \textit{Detailed report from Toggl}}
+\includepdf{includes/detailed-report_toggl.pdf}
 
 
 % Examples
