@@ -107,6 +107,9 @@
 \tableofcontents
 \listoffigures
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PAGE COUNTING STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Start with content and count from 1.
 \newpage
@@ -262,25 +265,13 @@
 		\label{sec:conclution}
 		\input{includes/cogARC_conclution}
 
-	%\section{Afterword}
-		%\label{sec:afterword}
-		%\input{includes/cogARC_afterword}
 
-
-\todo{Remove this when people know how to use glossaries or before delivery}
-Here is an example on how to use glossaries. We can for example use the word
-\gls{ECMAScript}. Now we get the text ECMAScript with a link to the glossary
-list. In the glossary list there will also be a link to where this is 
-referenced in the document. The same applies for \gls{serialization}.
-
-Example of references inside the document:
-	Here is a reference to chapter \ref{sec:related_work}.
-	Here is a reference with the name of the chapter \nameref{sec:related_work}
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% APPENDICES STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Appendices}
-
+ 
 \appendix %after this line all chapters will have leters instead of numbers
 %\appendixpage
 %\addappheadtotoc
@@ -295,33 +286,16 @@ Example of references inside the document:
 % Time management
 \clearpage
 \phantomsection
-\includepdfset{pages=-,pagecommand=\thispagestyle{plain}}
+\includepdfset{pagecommand=\thispagestyle{plain}}
 \label{appx:time_management}
-\addcontentsline{toc}{chapter}
-	{Time management\\ \textit{Summary report from Toggl}}
-\includepdf{includes/summary-report_toggl.pdf}
 
-\clearpage
-\phantomsection
-\includepdfset{pages=-,pagecommand=\thispagestyle{plain}}
-\label{appx:time_management}
-\addcontentsline{toc}{chapter}
-	{Time management\\ \textit{Detailed report from Toggl}}
-\includepdf{includes/detailed-report_toggl.pdf}
+\addcontentsline{toc}{chapter}{Time management}
 
+\addcontentsline{toc}{section}{Summary report}
+\includepdf[pages=1]{includes/summary-report_toggl}
 
-% Examples
-% \input{includes/example_packages}
-
-% \input{includes/example_structure}
-
-% \input{includes/example_meetings}
-
-% \GUC, 
-% \comment{so what}
-
-% \todo{task \#1}
-% This is a todo-task we need to get done.
+\addcontentsline{toc}{section}{Detailed report}
+\includepdf[pages=-]{includes/detailed-report_toggl}
 
 
 \end{document}
