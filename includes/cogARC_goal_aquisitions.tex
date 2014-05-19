@@ -1,0 +1,59 @@
+\begin{description}
+	\item[Result goals]\ 
+	\begin{itemize}
+		\item 7 games.
+		\item Adaptable framework.
+		\item Viable bachelor thesis.
+		\item Combine physical cubes and digital structures.
+	\end{itemize}
+\end{description}
+
+These are the result goals we started out with. During the process some of them
+were altered a little. Some of the game id\'eas were dropped due to technical
+issues. Some were decided to be abandoned in conversation with our employer.
+They were simply not interesting or necessary enough. This selection process
+was done over time in the early phases of the project. In the end, we finished
+every game that were planned. One of the games we dropped were implemented
+close up to the deadline, but finalization with proper testing were not
+prioritized. This shows that the framework is adaptable and it does not take
+very long time to expand on it to create new simple game types.
+
+The framework we made is flexible beyond what was required to make the
+requested games.
+The rules of games can easily be changed in Unity. 
+There are several options for changing the difficulty of games, such as setting time limits, setting number of cubes used to form solutions and setting number of levels.
+For the \nameref{game:wo0ord_game}, the file containing the tasks can easily be changed. 
+The game description can be changed and the score system can to some degree be tweaked in the inspector.
+Adding a new game in main menu may not be straight forward, but there is not
+much to it. It is as described in \autoref{sec:adding_new_game}
+\nameref{sec:adding_new_game}.
+
+
+\todo{is this ok?}
+In the scripts it is fairly easy to create long series of games. 
+It is not added support for creating other series of several games or playing games in another order as this is coded into the behavior of the loading of scenes in the main menu.\\
+We think we completed the task well and the \nameref{game:wo0ord_game} and the inspector-framework (\ref{sec:editor_data}) were big additions to the initial assignment. Time-wise we logged a little over 400 hours each, which is a little lower than expected, but not uncommon. So we believe we have made a viable bachelor thesis.\\
+We turned the volatile environment seen by the cameras of the real world
+into fairly stable arrays and lists and tested them against both preset 
+and randomly created states. Some buggy behavior occurs, but most of this
+is because the images from the camera are too bad for the trackers or because
+of Vuforias tracking algorithms and therefore such that we have little or no control over the matter.\\
+
+\begin{description}
+	\item[Effect goals]\ 
+	\begin{itemize}
+		\item Support research.
+		\item Experience with a game engine.
+		\item Experience with a longer development process.
+		\item Experience with digital space linked to reality.
+	\end{itemize}
+\end{description}
+We cannot really say at this point how well our product will support the research, but our employer stated that he was pleased with the product and we were able to meet most of the requirements for logging events. 
+So we reckon it will be at least a little useful.\\
+We haven't had a lot experience with large projects and they have all been in different environments, coding languages and with different tools. 
+So we had a lot of trouble in the beginning of the project figuring out how to structure, set up the scene hierarchy, where to put scripts and how to make scripts communicate.
+As we implemented new features we went over the structure several times, improving it a little each time. 
+The Unity project still shows signs of structural weaknesses we chose not to remove because it would mean a lot of refactoring-work. 
+We believe that in future projects in Unity and similar we will be able to set much better structure because of the experience we gained in this project.\\
+We didn't really explore the field of AR as much as our supervisor wanted us to, but we studied the possibilities. 
+If the technology had been better we might have gone much deeper in this direction.
