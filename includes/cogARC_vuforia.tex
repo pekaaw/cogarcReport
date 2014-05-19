@@ -7,7 +7,7 @@ Vuforia supports tracking of several different objects. It can track frame marke
 The frame markers gets its name from their form. They are simple squares with a thick black outline with small squares of black or white around the inside of that square, the inner part of the frame marker can
 contain anything the developer wish as long as the frame is clearly visible as Vuforia need to be able to detect the entire frame to activate augmentation.
 Image markers can be more complex images and unlike the frame markers the image marker does not the entire image to be detected to activate augmentation.
-If the image is clearly recognizable enough it needs only parts of it to be visible, we have seen demonstations where only half the image is visible and it is still able to track the image but it still need to see the entire image to begin the tracking.
+If the image is clearly recognizable enough it needs only parts of it to be visible, we have seen demonstrations where only half the image is visible and it is still able to track the image but it still need to see the entire image to begin the tracking.
 Vuforia also supports cylinder targets and multi-targets which are image targets on cylinders or boxes such as a can of hairspray or a box of cereal where the logo can show augmentation such as product info.
 And lastly it supports detecting and tracking of words, the words have to be between two to twenty-four characters long and not contain numbers.
 It detects words based on a list of words and is currently supporting more than 100,000 English words \cite{VuforiaTextMarker}.
@@ -20,6 +20,6 @@ One of the biggest difficulties we had with Vuforia was the lack of documentatio
 This is closely related to some of our problems during development as to what happens when Vuforia loses the tracking of a frame marker  that is clearly visible
  to the camera and should be able to track it.
 We are not completely certain but we have experienced that lighting condition is what plays the most important role in this.
-What is normaly done for making Vuforia augment an object in Unity is that you add the frame marker into the scene that you want Vuforia to be able to track and as a child of that frame marker you 
+What is normally done for making Vuforia augment an object in Unity is that you add the frame marker into the scene that you want Vuforia to be able to track and as a child of that frame marker you 
 put the object(s) you want visible when Vuforia finds the marker.
 

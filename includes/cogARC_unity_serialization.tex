@@ -12,19 +12,19 @@ However, there are a few ways to make sure Unity knows that the data shall be pr
 \begin{enumerate}
 	\item Make the data field public
 	\item Mark the field as serialize-able (@SerializeField in Unity JavaScript and [SerlializeField] in C\#)
-	\item Mark the class as serialize-able (@Serialize in Uniy JavaScript and [Serialize] in C\#)
+	\item Mark the class as serialize-able (@Serialize in Unity JavaScript and [Serialize] in C\#)
 	\item Make a class that derives its base type from ScriptableObject
 \end {enumerate}
 
 By having the data marked in either of those ways or a combination of them will ensure that Unity will try to serialize it if it can.
-But there are a few things that Unity can not easily serialize, even if it adhere to the previously mentioned guidelines, and most notably it can not serialize an array of normal objects where the objects contain data that Unity does serialize, not even a partial seerialization where only some data is destroyed.
+But there are a few things that Unity can not easily serialize, even if it adhere to the previously mentioned guidelines, and most notably it can not serialize an array of normal objects where the objects contain data that Unity does serialize, not even a partial serialization where only some data is destroyed.
 It can serialize an array of objects that is derived from ScriptableObject. What the serialize will do is serialize each object in the
 array individually and put a pointer into the array. To make this work the ScriptableObject derived class has to be in its own
 C\# file.
 Unfortunately for us we are using Unity JavaScript in this project, and getting C\# and JavaScript to work nicely
 together is not a trivial task in Unity.
 
-The Unity serialization gave us as a group a lot of troubles, specifically with the data we wanted saved for how each cube is designed for each seperate game.
+The Unity serialization gave us as a group a lot of troubles, specifically with the data we wanted saved for how each cube is designed for each separate game.
 For the cubes design we made a class named BoxDesign that was intended to contain all the data and functionality needed to control and set the design for the cubes in the game.
 By following the guidelines from Unity on how to make the class serialize we made the class derive from ScriptableObject and marked all non-public fields with @SerializeField and marked the entire class with @Serialize, but no matter what we tried to do the array we put the data into did not survive the assembly reload.
 It took most of the group the better part of three weeks of work and research on the matter to find a solution.
