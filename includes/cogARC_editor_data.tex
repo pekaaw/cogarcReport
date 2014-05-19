@@ -4,13 +4,12 @@
 	\caption{Default Unity inspector}
 \end{wrapfigure}
 
-To edit what the games does and how they look like we wanted meant that a lot of variables from our scripts had to be exposed.
-By default Unity will expose all public variables in a script.
-This includes scripts that the script want publicly available for other scripts to get or variables that should not be accessible for the
-user but accessible for other scripts as the variable is only kept in the script but not used.
+To edit what the games does and how they look, meant that a lot of variables from our scripts had to be changeable in the inspector.
+By default Unity will make all public variables in a script changeable in the inspector.
+This includes script-references and other variables that should not be accessible for the user, but accessible for other scripts as these variables have to do with the scripts communication during a game-session and does not have anything to do with setting up the game.
 
 In our case we had a script that was to hold as much data about a minigame as possible.
-This was so the game could be easily changed in the inspector of Unity without having to go into a script and manually edit.
+This was so the game could be easily changed in the inspector of Unity without having to go into a script to edit it.
 
 The inspector quickly became crowded both by unnecessary variables that while they were needed they were not needed exposed all the time.
 For instance there is no need to see the variables for creating a grid when you are creating a shape matching game.
