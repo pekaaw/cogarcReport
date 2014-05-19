@@ -25,7 +25,7 @@ Since one of the games required the player to build towers with the cubes and th
 \end{wrapfigure}
 
 From a standard Unity function we got the rotation of the real world from the gyroscope. The optimal thing to do would be to rotate the Unity-world to be the same as this rotation. This however was not possible and the markers use global position so we couldn't make a virtual world object in Unity to rotate. We could have added the rotation to the cubes transforms, but we only needed to know the direction of collisions. \\
-To solve this we made an object that get its rotation directly from the gyroscope. To this object we added a child object that has a local position one unit above the parent. Subtracting the global position of the parent from the childs global position gives us a unit vector for the direction up in the real world. This could have been done more effeciently without the objects, but it was important to have visual indications of directions for development and testing.\\
+To solve this we made an object that get its rotation directly from the gyroscope. To this object we added a child object that has a local position one unit above the parent. Subtracting the global position of the parent from the child's global position gives us a unit vector for the direction up in the real world. This could have been done more effeciently without the objects, but it was important to have visual indications of directions for development and testing.\\
 
 \begin{wrapfigure}{r}{0.4\textwidth}
         \capstart
