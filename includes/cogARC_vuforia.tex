@@ -9,8 +9,8 @@ contain anything the developer wish as long as the frame is clearly visible as V
 Image markers can be more complex images and unlike the frame markers the image marker does not the entire image to be detected to activate augmentation.
 If the image is clearly recognizable enough it needs only parts of it to be visible, we have seen demonstations where only half the image is visible and it is still able to track the image but it still need to see the entire image to begin the tracking.
 Vuforia also supports cylinder targets and multi-targets which are image targets on cylinders or boxes such as a can of hairspray or a box of cereal where the logo can show augmentation such as product info.
-And lastly it supports detecting and tracking of workds, the words have to be between two to twenty-four characters long and not contain numbers.
-It detecteds words based on a list of words and is currently supporting more than 100,000 English words \cite{VuforiaTextMarker}.
+And lastly it supports detecting and tracking of words, the words have to be between two to twenty-four characters long and not contain numbers.
+It detects words based on a list of words and is currently supporting more than 100,000 English words \cite{VuforiaTextMarker}.
 
 For our project we opted for the frame markers as we need to be able to track up to ten at a time without draining all the resources available as the program will be run primarily on a phone or tablet.
 For tracking frame markers Vuforia does a very good job as long as the frame markers are clearly visible for the camera detecting it.
