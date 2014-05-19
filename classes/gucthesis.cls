@@ -839,7 +839,7 @@ Use $\backslash$useyear\{<year>\} to set year.
 		& \multicolumn{4}{@{  }l}{}\\
 	Kontaktperson: & \multicolumn{4}{@{  }p{0.6\textwidth}}{\gmt@contact}\\
 		& \multicolumn{4}{@{  }l}{}\\
-	N\o{}kkeLord: & {\gmt@keywordsNOR}\\
+  N\o{}kkeLord: & \multicolumn{4}{@{  }l}{\gmt@keywordsNOR}\\
 	Antall sider: & \pageref{STOP_SUMMARY_PAGECOUNT} \\ 
 	Antall vedlegg: &  \gmt@appnumber \\
 	Tilgjengelighet: & \AA{}pen \\ % this needs updating \gmt@pubNOR}\\
